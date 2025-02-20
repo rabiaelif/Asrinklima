@@ -1,7 +1,7 @@
 const Number2 = () => {
     return (
         <div>
-            found
+        hi
         </div>
     )
 }

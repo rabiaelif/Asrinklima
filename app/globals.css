@@ -1,5 +1,11 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 @import "tailwindcss";
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,18 +21,30 @@
   }
 }
 
-.background-image {
-  background-color: beige;
-  background-image: url('/image.jpg');
-  opacity: 0.3; /* Örnek bir opaklık değeri */
-    background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: Arial, sans-serif;
+html,
+body {
+  overflow-x: hidden;
+  /* Yatay kaydırmayı gizler */
+}
+
+@theme {
+  --color-blue: #0E2954;
+  --color-white: #EDF9FF;
+  --color-red: #F53E3E;
+  --color-yellow: #E6EF96;
+
+}
+
+@theme {
+  --font-script: Outfit, cursive;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
 }

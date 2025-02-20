@@ -1,12 +1,21 @@
 interface HeaderButtonProps {
   text: string;
+  isScrolled: boolean;
+  href: string;  // Yeni parametre
 }
 
-const HeaderButton: React.FC<HeaderButtonProps> = ({ text }) => {
+const HeaderButton: React.FC<HeaderButtonProps> = ({ text, isScrolled, href }) => {
   return (
-    <button className="text-s items-end text-gray-700">
-      {text}
-    </button>
+    <a
+      href={href}  // Linki burada belirtiyoruz
+    >
+      <span
+        className={`font-medium transition-colors bg-transparent duration-300 border-hidden lg:text-lg text-base hover:text-yellow ${isScrolled ? "text-white" : "text-white"
+          }`}>
+
+        {text}
+      </span>
+    </a>
   );
 };
 
