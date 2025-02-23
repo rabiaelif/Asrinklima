@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Number1 from "./Number1";
 
 const ImageWithText: React.FC = () => {
-    const [objectPosition, setObjectPosition] = useState("40% center"); // Varsayılan pozisyon
+    const [objectPosition, setObjectPosition] = useState("50% center"); // Varsayılan pozisyon
 
     useEffect(() => {
         const handleResize = () => {

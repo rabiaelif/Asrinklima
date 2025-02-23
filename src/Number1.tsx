@@ -12,9 +12,9 @@ const Number1 = () => {
                             <ClockIcon className="size-5 text-yellow" />
                             <span>24/7 Ulaşılabilir</span></div>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold">
+                    <h2 className="text-3xl md:text-4xl font-bold">
                         ISITMA, SOĞUTMA VE HAVALANDIRMA HİZMETLERİ
-                    </h1>
+                    </h2>
                     <p className="text-lg max-w-xl font-regular">
 
                         Ev, ofis ve fabrika klimalarının tamir, bakım, onarım ve kiralama hizmetlerini sunmaktayız.</p>
