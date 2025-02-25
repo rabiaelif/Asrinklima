@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/src/Header";
+import Header from "@/src/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "Isıtma, Soğutma, Havalandırma Sistemleri",

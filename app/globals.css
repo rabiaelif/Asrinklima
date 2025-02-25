@@ -59,13 +59,7 @@ h1::before {
   @apply absolute h-[19px] w-full px-20 bg-yellow/80 bottom-0 left-0 transform translate-y-1 -z-10;
 }
 
-
-
 p {
-  font-size: 1.25em; /* İstediğin boyutu ayarlayabilirsin */
-  font-weight: medium; /* Yazıyı kalın yapmak için */
-  margin: 16px 0; /* Üst ve alt boşlukları ayarlamak için */
-  /* Yazı rengini belirlemek için */
-  line-height: 26px;
+  @apply text-base font-medium my-4 pb-4
 }
 

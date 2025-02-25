@@ -10,7 +10,7 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, isScrolled, href }) =
       href={href}  // Linki burada belirtiyoruz
     >
       <span
-        className={`font-medium transition-colors bg-transparent duration-300 border-hidden lg:text-lg text-base hover:text-yellow ${isScrolled ? "text-white" : "text-white"
+        className={`font-medium transition-colors bg-transparent  border-hidden lg:text-lg text-base hover:text-yellow ${isScrolled ? "text-white" : "text-white"
           }`}>
 
         {text}

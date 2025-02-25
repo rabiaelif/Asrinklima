@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Number1 from "./Number1";
+import HomePage from "./HomePage";
 
 const ImageWithText: React.FC = () => {
     const [objectPosition, setObjectPosition] = useState("50% center"); // Varsayılan pozisyon
@@ -16,16 +16,16 @@ const ImageWithText: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full min-h-[650px] h-screen overflow-hidden">
             <img
                 src="/image2.jpg"
                 alt="Background"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover " // max-h sınıfı ile yüksekliği sınırlandır
                 style={{ objectPosition }}
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0" />
             <div className="absolute top-0 left-0 w-full h-full flex items-center pt-45 justify-center z-10">
-                <Number1 />
+                <HomePage />
             </div>
         </div>
     );

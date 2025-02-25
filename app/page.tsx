@@ -1,17 +1,16 @@
 // pages/index.js
 'use client'
 
-import Header from '@/src/Header';
-import Image from '@/src/Image';
-import Number2 from '@/src/Number2';
+import Image from '@/src/components/HomePage/Image';
 import React from 'react';
+import AboutPage from '@/src/components/AboutPage/AboutPage';
 
 const HomePage = () => {
   return (
 
-    <div>
+    <div className=''>
       <Image/>
-        <Number2/>
+        <AboutPage/>
     </div>
   );
 };
