@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 w-full z-[9999] ${isScrolled ? "bg-blue shadow-lg" : "bg-transparent"} transition-all duration-300`}
       style={{ willChange: "auto", transform: "none" }}>
-      <nav className="mx-auto w-full flex md:justify-center justify-start items-center max-lg:gap-6 md:px-6 px-4 py-4 container">
+      <nav className="mx-auto w-full flex md:justify-center justify-start items-center max-lg:gap-6 lg:px-6 px-4 py-4 container">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Logo />
         </div>
 
-        <div className=" space-x-4 lg:space-x-6 hidden md:flex justify-center w-full items-center h-full">
+        <div className=" space-x-4 lg:space-x-8 hidden md:flex justify-center w-full items-center h-full">
           <HeaderButton href="/" text="ANASAYFA" isScrolled={isScrolled} />
           <HeaderButton href="/" text="HİZMETLERİMİZ" isScrolled={isScrolled} />
           <HeaderButton href="/" text="KİRALAMA" isScrolled={isScrolled} />

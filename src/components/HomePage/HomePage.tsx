@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const HomePage = () => {
     return (
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container w-full mx-auto lg:px-8 px-4 relative z-10">
             <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center">
                 <div className="lg:col-span-9 xl:col-span-7 2xl:col-span-6 text-white space-y-5">
                     <div className="flex gap-6 text-sm">
@@ -22,15 +22,15 @@ const HomePage = () => {
 
                     <button className="relative flex justify-between rounded-lg bg-white text-blue px-8 py-2.5 cursor-pointer text-base font-semibold w-[200px] transition-all duration-300 hover:text-blue hover:before:absolute hover:before:inset-0 hover:before:bg-black hover:before:opacity-10 hover:before:rounded-lg hover:before:content-[''] active:before:opacity-20">
                         Detaylı İncele
-                        <ArrowUpRight/>
+                        <ArrowUpRight />
 
 
                     </button>
 
-                    <div className="grid grid-cols-2 justify-start pt-6 gap-x-4 sm:gap-x-0 lg:mr-10">
+                    <div className="grid min-[400px]:grid-cols-2 grid-cols-1 gap-4 w-full justify-start sm:pt-6 gap-x-4 lg:mr-10">
 
-                        <div className="bg-[#EDF9FF]/5 cursor-pointer backdrop-blur-md rounded-lg sm:p-4 p-2 flex justify-center w-full sm:w-[300px] max-h-[105px] hover:bg-white/10 transition-colors">
-                            <div className="sm:flex items-center justify-center gap-4 sm:gap-12">
+                        <div className="bg-[#EDF9FF]/5 cursor-pointer backdrop-blur-md rounded-lg p-4 flex justify-center w-full sm:w-[300px] max-h-[105px] hover:bg-white/10 transition-colors">
+                            <div className="flex text-center items-center justify-center gap-4 sm:gap-12">
                                 <PhoneIcon className="h-6 w-6 text-yellow " />
                                 <div className="flex flex-col gap-2.5">
                                     <span className="text-md font-medium text-center">Hakan Şahin</span>

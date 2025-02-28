@@ -63,3 +63,10 @@ p {
   @apply text-base font-medium my-4 pb-4
 }
 
+progress-bar {
+  @apply relative h-5 w-80 border-2 border-solid border-amber-300
+}
+
+filler {
+ @apply bg-yellow h-full text-inherit transition-all duration-200 ease-in w-0 hover:w-full
+}
