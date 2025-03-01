@@ -1,11 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import "swiper/css/pagination"; // Pagination stilini ekle
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const services = [
   { title: "Split Klima Bakım, Onarım", img: "/vrfklima.jpg" },
@@ -25,46 +25,27 @@ const services = [
 ];
 
 export default function OurServices() {
-  const [slides, setSlides] = useState(4); // Varsayılan olarak 4 kart
-  const [progress, setProgress] = useState(0); // Progress bar için state ekledik
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1280) setSlides(5);
-      else if (window.innerWidth > 1024) setSlides(4);
-      else if (window.innerWidth > 768) setSlides(3);
-      else setSlides(2);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleSlideChange = (swiper: any) => {
-    const progressValue = ((swiper.realIndex + 1) / services.length) * 100;
-    setProgress(progressValue);
-  };
-
+  const [progress, setProgress] = useState(0);
   return (
-    <section className="h-[700px] w-full overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="h-[700px] max-w-screen overflow-hidden">
+      <div className="sm:container mx-auto sm:px-4">
         <div className="relative w-full">
           <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={250} // Kartlar arasındaki boşluk
-            slidesPerView={slides} // Ekran genişliğine göre değişken
-            centeredSlides={true}
+            modules={[Navigation, Pagination]} // Pagination'ı modüllerimize ekliyoruz
+            spaceBetween={30} // Kartlar arasındaki boşluk
+            slidesPerView={"auto"} // Kart genişliğini içerik boyutuna göre ayarla
+            loop={false} // Döngü kapalı
             navigation={{
               nextEl: ".next-btn",
               prevEl: ".prev-btn",
             }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            className="pb-14 overflow-visible"
-            onSlideChange={handleSlideChange} // Slide değiştiğinde handleSlideChange fonksiyonunu çağırıyoruz
+            pagination={{
+              type: "progressbar", // Progress bar tipi olarak "progressbar" seçildi
+            }}
+            className="pb-14 sm:!overflow-visible max-w-screen"
           >
             {services.map((service, index) => (
-              <SwiperSlide key={index} className="flex justify-center">
+              <SwiperSlide key={index} className="flex flex-col overflow-hidden justify-start">
                 <div className="bg-[#F6F6F6] h-[330px] w-[330px] flex flex-col justify-end items-center rounded-[30px] p-4 text-black relative">
                   <img
                     src={service.img}
@@ -77,10 +58,14 @@ export default function OurServices() {
                 </div>
               </SwiperSlide>
             ))}
+          
+       
+
+
           </Swiper>
 
           {/* Navigasyon Butonları */}
-          <div className="absolute bottom-0 right-0 flex items-center space-x-2 p-4 z-10">
+          <div className="absolute bottom-0 right-0 flex items-center space-x-2 p-4 z-50">
             <button className="prev-btn p-3 bg-white shadow-lg rounded-full">
               <ArrowLeft className="h-6 w-6 text-gray-700" />
             </button>
@@ -89,16 +74,8 @@ export default function OurServices() {
             </button>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mt-8 h-0.5 rounded-full dark:bg-[#EBEBED] swiper-pagination-progressbar swiper-pagination-horizontal">
-            <span
-              className="swiper-pagination-progressbar-fill block h-full bg-yellow"
-              style={{
-                width: `${progress}%`,
-                backgroundColor: progress === 100 ? "yellow" : "yellow", // İlerleme %100 olduğunda yeşil, diğer durumlarda sarı
-              }}
-            ></span>
-          </div>
+          {/* Özel Progress Bar */}
+        
         </div>
       </div>
     </section>
