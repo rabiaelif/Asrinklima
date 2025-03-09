@@ -1,11 +1,8 @@
-/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 @import "tailwindcss";
 
+@layer theme, base, components, utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,7 +21,6 @@
 html,
 body {
   overflow-x: hidden;
-  /* Yatay kaydırmayı gizler */
 }
 
 @theme {
@@ -32,7 +28,8 @@ body {
   --color-white: #EDF9FF;
   --color-red: #F53E3E;
   --color-yellow: #E6EF96;
-  --color-black: #373B40;
+  --color-black: #050506
+  ;
 
 }
 
@@ -51,16 +48,19 @@ body {
 }
 
 h1 {
-  @apply text-3xl font-semibold px-3 text-blue relative;
+  @apply text-3xl font-bold px-3 text-blue relative;
 }
 
 h1::before {
   content: '';
   @apply absolute h-[19px] w-full px-20 bg-yellow/80 bottom-0 left-0 transform translate-y-1 -z-10;
 }
+h1.no-before::before {
+  @apply content-none;
+}
 
 p {
-  @apply text-base font-medium my-4 pb-4
+  @apply lg:text-base text-lg text-black font-medium my-4 lg:pb-4
 }
 
 progress-bar {
@@ -78,21 +78,44 @@ filler {
 }
 
 .swiper-slide {
-  width: 330px !important; /* Slaytların genişliği dinamik olsun */
-  max-width: 100%;
-  flex-shrink: 0; /* Slaytlar sıkışmasın */
+  @apply !w-[330px] max-w-full pb-14
 }
 
 .swiper {
   width: 100%;
   height: 100%;
 }
-/* page.css ya da global stil dosyanızda */
+
 :root {
-  --swiper-pagination-color: #E6EF96; /* Sarı renk */
-  --swiper-pagination-progressbar-bg-color: #EBEBED; /* Gri arka plan */
-}/* Global stil veya custom CSS dosyanızda */
+  --swiper-pagination-color: #E6EF96;
+  --swiper-pagination-progressbar-bg-color: #EBEBED;
+}
 
 .swiper-horizontal > .swiper-pagination-progressbar {
-  top: 350px !important; /* top: 0; özelliğini geçersiz kılmak için */
+ @apply  !top-auto  !right-36 !w-auto
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 660px) {
+  .animate-slide {
+    animation: slide 5s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+}
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

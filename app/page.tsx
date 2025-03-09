@@ -1,11 +1,11 @@
-// pages/index.js
 'use client'
 
-import Image from '@/src/components/HomePage/Image';
+import Image from '@/app/components/HomePage/Image';
 import React from 'react';
-import AboutPage from '@/src/components/AboutPage/AboutPage';
-import OurServices from '@/src/components/OurServices/OurSercives';
-import HeaderOurServices from '@/src/components/OurServices/ProgressBar';
+import AboutPage from '@/app/components/AboutPage/AboutPage';
+import OurServices from '@/app/components/OurServices/OurSercives';
+import HeaderOurServices from '@/app/components/OurServices/HeaderOurServices';
+import ContactUs from './components/ContactUs/ContactUs';
 
 const HomePage = () => {
   return (
@@ -15,6 +15,7 @@ const HomePage = () => {
         <AboutPage/>
         <HeaderOurServices/>
         <OurServices/>
+        <ContactUs/>
     </div>
   );
 };

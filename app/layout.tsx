@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/src/components/layout/Header";
+import Header from "@/app/components/layout/Header";
+import Footer from "@/app/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Isıtma, Soğutma, Havalandırma Sistemleri",
@@ -29,13 +30,14 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="flex min-h-screen min-w-screen">
-          <div className="flex-1">
-            <header className="z-30 hidden sm:flex">
-              <Header />
-            </header>
-            <main className="flex-1">{children}</main>
-          </div>
+        <div className="flex flex-col min-h-screen">
+          <header className="z-30 hidden sm:flex">
+            <Header />
+          </header>
+          <main className="flex-1">{children}</main>
+          <footer className="mt-auto z-30">
+            <Footer />
+          </footer>
         </div>
       </body>
     </html>

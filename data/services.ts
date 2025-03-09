@@ -1,0 +1,15 @@
+export const services = [
+    { title: "Split Klima Bakım, Onarım ve Yedek Parça", img: "/vrfklima.jpg" },
+    { title: "Chiller Revizyon Onarım", img: "/vrfklima.jpg" },
+    { title: "Rooftop Klima Arıza, Bakım ve Onarım", img: "/vrfklima.jpg" },
+    { title: "VRF Klima Sistemleri", img: "/vrfklima.jpg" },
+    { title: "Klima Santrali Bakım ve Onarım", img: "/vrfklima.jpg" },
+    { title: "Pano Klima Bakım ve Onarım", img: "/vrfklima.jpg" },
+    { title: "Soğuk Oda İmalat Ve Onarım", img: "/vrfklima.jpg" },
+    { title: "Havuz Nem Alma Cihazı", img: "/vrfklima.jpg" },
+    { title: "Hastane Hijyenik Klima Bakımı Ve Onarımı", img: "/images/industrial.jpg" },
+    { title: "DX Soğutma Sistemleri", img: "/images/ventilation.jpg" },
+    { title: "Kanal Temizliği", img: "/images/hotel.jpg" },
+    { title: "Klima Cihaz Kiralama", img: "/images/factory.jpg" },
+    { title: "Veri Merkezi", img: "/images/car.jpg" },
+  ];

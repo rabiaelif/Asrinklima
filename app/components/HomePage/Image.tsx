@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import HomePage from "./HomePage";
 
 const ImageWithText: React.FC = () => {
-    const [objectPosition, setObjectPosition] = useState("50% center"); // Varsayılan pozisyon
+    const [objectPosition, setObjectPosition] = useState("50% center");
 
     useEffect(() => {
         const handleResize = () => {
             setObjectPosition(window.innerWidth >= 640 ? "50% center" : "40% center");
         };
 
-        handleResize(); // İlk yüklemede çalıştır
-        window.addEventListener("resize", handleResize); // Pencere boyutu değiştiğinde çalıştır
+        handleResize();
+        window.addEventListener("resize", handleResize);
 
-        return () => window.removeEventListener("resize", handleResize); // Temizleme fonksiyonu
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return (
@@ -20,10 +20,10 @@ const ImageWithText: React.FC = () => {
             <img
                 src="/image2.jpg"
                 alt="Background"
-                className="w-full h-full object-cover " // max-h sınıfı ile yüksekliği sınırlandır
+                className="w-full h-full object-cover "
                 style={{ objectPosition }}
             />
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[#000000] opacity-40 z-0" />
             <div className="absolute top-0 left-0 w-full h-full flex items-center pt-45 justify-center z-10">
                 <HomePage />
             </div>
