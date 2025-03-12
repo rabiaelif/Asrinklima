@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/app/components/layout/Header";
 import Footer from "@/app/components/layout/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Isıtma, Soğutma, Havalandırma Sistemleri",
@@ -30,6 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+      <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <header className="hidden sm:flex">
             <Header />

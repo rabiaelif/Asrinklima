@@ -37,7 +37,7 @@ const ImageGallery = () => {
                     ))}
                 </Swiper>
             </div>
-            <div className="hidden lg:flex justify-center lg:justify-end xl:justify-center ">
+            <div className="hidden lg:flex justify-center lg:justify-end">
 
                 <div className="hidden lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-0">
                     {images.map((image, index) => (

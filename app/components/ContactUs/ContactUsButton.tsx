@@ -3,7 +3,7 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 const ContactUsButton = () => {
     return (
         <div>
-            <div className="grid min-[600px]:grid-cols-2 grid-cols-1 gap-4 xl:gap-8  justify-start sm:pt-6">
+            <div className="grid min-[600px]:grid-cols-2 grid-cols-1 gap-4 xl:gap-8 justify-start pt-4">
 
                 <div className="border-2 hover:border-red relative overflow-hidden border-[#D9D9D9] rounded-xl xl:p-6 lg:p-4 p-6 flex items-center">
                     <div className="flex items-center xl:gap-4 lg:gap-2 gap-4">

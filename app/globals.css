@@ -94,28 +94,3 @@ filler {
 .swiper-horizontal > .swiper-pagination-progressbar {
  @apply  !top-auto  !right-36 !w-auto
 }
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 660px) {
-  .animate-slide {
-    animation: slide 5s linear infinite;
-    display: flex;
-    white-space: nowrap;
-  }
-}
-@layer utilities {
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-}

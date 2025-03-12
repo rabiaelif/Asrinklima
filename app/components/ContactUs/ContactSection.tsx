@@ -3,18 +3,21 @@ import ContactUsButton from "./ContactUsButton";
 
 const ContactSection = () => {
     return (
-        <div className="mx-auto container ">
-            <div className="flex items-center">
+        <div className="mx-auto container translate-x-[0px]">
+            <div className="flex items-center pb-4">
                 <ChatBubbleLeftRightIcon className="h-9 w-9" />
-                <h1 className="text-3xl font-semibold ml-2">Bize Ulaşın</h1>
+                <h1 className="text-3xl no-before font-semibold ml-2">Bize Ulaşın</h1>
             </div>
-            <p className="mt-4 text-gray-600">
-                Klima ve soğutma çözümleriniz için profesyonel destek sunuyoruz!
-                Montaj, bakım ve tamir hizmetlerimizle ihtiyaçlarınıza en uygun
-                çözümleri sağlamak için buradayız. Daha fazla bilgi veya size özel
-                bir teklif için bizimle iletişime geçin.
+            <p className="mt-4 leading-tight text-gray-600">
+                <span>Klima ve soğutma çözümleriniz için profesyonel destek sunuyoruz!</span>
+                <br />
+                <br />
+                <span>Montaj, bakım ve tamir hizmetlerimizle ihtiyaçlarınıza en uygun çözümleri sağlamak için buradayız.</span>
+                <br />
+                <span>Daha fazla bilgi veya size özel bir teklif için bizimle iletişime geçin.</span>
             </p>
-            <div className="mt-6">
+
+            <div className="">
                 <ContactUsButton />
             </div>
         </div>
