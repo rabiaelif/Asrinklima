@@ -16,7 +16,7 @@ const ImageWithText: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative w-full min-h-[650px] h-screen overflow-hidden">
+        <section id="anasayfa" className="relative w-full min-h-[650px] h-screen overflow-hidden">
             <img
                 src="/image2.jpg"
                 alt="Background"
@@ -27,7 +27,7 @@ const ImageWithText: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-full flex items-center pt-45 justify-center z-10">
                 <HomePage />
             </div>
-        </div>
+        </section>
     );
 };
 

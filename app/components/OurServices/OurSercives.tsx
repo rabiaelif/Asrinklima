@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeaderOurServices from "./HeaderOurServices";
 
 interface Service {
   title: string;
@@ -70,7 +71,9 @@ export default function OurServices() {
   };
 
   return (
-    <section className="px-4 max-w-screen overflow-x-hidden">
+    <section id="hizmetlerimiz" >
+      <HeaderOurServices/>
+      <div className="px-4 max-w-screen overflow-x-hidden">
       <div className="sm:container mx-auto sm:px-4 ">
         <div className="relative w-full">
           <Swiper
@@ -143,6 +146,7 @@ export default function OurServices() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

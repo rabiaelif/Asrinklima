@@ -25,17 +25,16 @@ const Header = () => {
       style={{ willChange: "auto", transform: "none" }}
     >
       <nav className="mx-auto w-full flex md:justify-center justify-start items-center max-lg:gap-6 lg:px-6 px-4 py-4 container">
-        {/* Logo */}
         <div className="flex-shrink-0">
           <Logo />
         </div>
 
         <div className="space-x-4 lg:space-x-8 hidden md:flex justify-center w-full items-center h-full">
-          <HeaderButton href="/" text="ANASAYFA" isScrolled={isScrolled} />
-          <HeaderButton href="/hizmetlerimiz" text="HİZMETLERİMİZ" isScrolled={isScrolled} />
-          <HeaderButton href="/" text="KİRALAMA" isScrolled={isScrolled} />
-          <HeaderButton href="/" text="HAKKIMIZDA" isScrolled={isScrolled} />
-          <HeaderButton href="/" text="İLETİŞİM" isScrolled={isScrolled} />
+          <HeaderButton href="#anasayfa" text="ANASAYFA" isScrolled={isScrolled} />
+          <HeaderButton href="#hizmetlerimiz" text="HİZMETLERİMİZ" isScrolled={isScrolled} />
+          <HeaderButton href="#kiralama" text="KİRALAMA" isScrolled={isScrolled} />
+          <HeaderButton href="#hakkımızda" text="HAKKIMIZDA" isScrolled={isScrolled} />
+          <HeaderButton href="#iletişim" text="İLETİŞİM" isScrolled={isScrolled} />
         </div>
       </nav>
     </header>

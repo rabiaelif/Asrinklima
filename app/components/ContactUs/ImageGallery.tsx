@@ -14,7 +14,7 @@ const images = [
 
 const ImageGallery = () => {
     return (
-        <section className="container max-md:px-2  mx-auto">
+        <section className="container max-md:px-2 mx-auto">
             <div className="lg:hidden ">
                 <Swiper
                     spaceBetween={10}

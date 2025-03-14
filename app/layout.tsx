@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/app/components/layout/Header";
 import Footer from "@/app/components/layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import HomeFooter from "./components/layout/HomeFooter";
 
 export const metadata: Metadata = {
   title: "Isıtma, Soğutma, Havalandırma Sistemleri",
@@ -38,7 +39,7 @@ export default function RootLayout({
           </header>
           <main className="flex-1">{children}</main>
           <footer className="mt-auto z-30">
-            <Footer />
+            <HomeFooter/>
           </footer>
         </div>
       </body>

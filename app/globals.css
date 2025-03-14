@@ -94,3 +94,23 @@ filler {
 .swiper-horizontal > .swiper-pagination-progressbar {
  @apply  !top-auto  !right-36 !w-auto
 }
+@layer components {
+  .h-services::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .h-services::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .h-services::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 110, 110, 0.25); 
+    border-radius: 10px;
+  }
+
+  .h-services::-webkit-scrollbar-thumb:hover {
+    background-color: #F53E3E;
+  }
+}

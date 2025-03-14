@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
     return (
-        <section id="about" className="relative flex items-center pt-24 pb-20  xl:py-28 overflow-hidden">
+        <section id="hakkımızda" className="relative flex items-center pt-24 pb-20  xl:py-28 overflow-hidden">
             <div className="container w-full mx-auto px-4 relative z-10">
                 <div className="container mx-auto items-center grid lg:grid-cols-2 gap-8 lg:gap-24 2xl:gap-0">
                     <div className="relative items-start lg:justify-start justify-center flex">
