@@ -1,9 +1,9 @@
 import React from 'react'
 
-const İklimlendirme = () => {
+const Iklimlendirme = () => {
   return (
     <div>İklimlendirme</div>
   )
 }
 
-export default İklimlendirme
+export default Iklimlendirme

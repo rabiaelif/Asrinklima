@@ -24,7 +24,27 @@ export default function SubCategoryPage({
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold">{subCategoryItem.title}</h2>
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold">{subCategoryItem.title}</h2>
+      </div>
+
+      <div className="space-y-4 lg:hidden flex">
+        <h3 className="text-xl font-semibold"></h3>
+        <ul className="space-y-2">
+          {service.subCategories.map((sub) => (
+            <li
+              key={sub.title}
+              className={`cursor-pointer p-2 rounded-lg hover:bg-gray-200 ${
+                sub.slug === subCategory ? "bg-red" : ""
+              }`}
+            >
+              <a href={`#${sub.slug}`} className="text-lg text-black">
+                {sub.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

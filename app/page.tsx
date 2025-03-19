@@ -9,26 +9,28 @@ import ContactUs from './components/ContactUs/ContactUs';
 
 const HomePage = () => {
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({
-          top: elementPosition - offset,
-          behavior: "smooth",
-        });
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - offset,
+            behavior: "smooth",
+          });
+        }
       }
     }
   }, []);
-  return (
 
+  return (
     <div className=''>
-      <Image/>
-        <AboutPage/>
-        <OurServices/>
-        <ContactUs/>
+      <Image />
+      <AboutPage />
+      <OurServices />
+      <ContactUs />
     </div>
   );
 };

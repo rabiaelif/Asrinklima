@@ -71,7 +71,7 @@ export default function OurServices() {
   };
 
   return (
-    <section id="hizmetlerimiz" >
+    <section id="hizmetlerimiz" className="scroll-mt-[60px]">
       <HeaderOurServices/>
       <div className="px-4 max-w-screen overflow-x-hidden">
       <div className="sm:container mx-auto sm:px-4 ">

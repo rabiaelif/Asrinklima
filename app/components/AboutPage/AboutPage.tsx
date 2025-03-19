@@ -11,6 +11,7 @@ const AboutPage = () => {
                         <Image
                             alt="resim"
                             width={501}
+                            priority
                             height={488}
                             src="/image3.png"
                             className="object-cover flex justify-center items-center rounded-2xl shadow-yellow/70 lg:shadow-[0_0_150px_8px] shadow-[0_0_70px_3px] w-full md:w-4/5 lg:w-[560px] h-[312px] lg:h-[488px] min-[540px]:h-auto lg:translate-x-[37px]"

@@ -2,15 +2,17 @@
 import { useState, useEffect } from "react";
 import HeaderButton from "./HeaderButton";
 import Logo from "./Logo";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    setIsScrolled(window.scrollY > 50);
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -19,22 +21,26 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-[9999] ${
-        isScrolled ? "bg-blue shadow-lg" : "bg-transparent"
-      } transition-all duration-300`}
-      style={{ willChange: "auto", transform: "none" }}
+      className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
+        isMenuOpen ? "bg-transparent" : isScrolled ? "bg-blue" : "bg-transparent"
+      }`}
     >
-      <nav className="mx-auto w-full flex md:justify-center justify-start items-center max-lg:gap-6 lg:px-6 px-4 py-4 container">
-        <div className="flex-shrink-0">
-          <Logo />
+      <nav className="mx-auto w-full flex justify-between items-center lg:px-6 px-4 py-4 container">
+        {/* Logo */}
+        <div className={`flex-shrink-0 ${isMenuOpen ? "max-lg:hidden" : "flex"}`}>
+          <Logo isMenuOpen={isMenuOpen}  />
         </div>
 
-        <div className="space-x-4 lg:space-x-8 hidden md:flex justify-center w-full items-center h-full">
-          <HeaderButton href="#anasayfa" text="ANASAYFA" isScrolled={isScrolled} />
-          <HeaderButton href="#hizmetlerimiz" text="HİZMETLERİMİZ" isScrolled={isScrolled} />
-          <HeaderButton href="#kiralama" text="KİRALAMA" isScrolled={isScrolled} />
-          <HeaderButton href="#hakkımızda" text="HAKKIMIZDA" isScrolled={isScrolled} />
-          <HeaderButton href="#iletişim" text="İLETİŞİM" isScrolled={isScrolled} />
+        <div className="space-x-4 lg:space-x-8 hidden text-white lg:flex justify-center w-full items-center h-full">
+          <HeaderButton href="#anasayfa" text="ANASAYFA"  />
+          <HeaderButton href="#hizmetlerimiz" text="HİZMETLERİMİZ"  />
+          <HeaderButton href="#kiralama" text="KİRALAMA"  />
+          <HeaderButton href="#hakkımızda" text="HAKKIMIZDA"  />
+          <HeaderButton href="#iletişim" text="İLETİŞİM"  />
+        </div>
+
+        <div className="lg:hidden">
+          <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
       </nav>
     </header>

@@ -15,12 +15,12 @@ export default function ServicesLayout({
         <ImageServices />
         </div>
       <div className="flex flex-1">
-        <aside className="w-76 z-20 ">
+        <aside className="w-76 z-20 lg:flex hidden">
           <Sidebar />
         </aside>
         <div className="flex-1">
           <main className="relative p-4 z-30">{children}</main>
-          <footer className="z-30 mt-4 relative">
+          <footer className="z-30 mt-4 relative ">
             <Footer />
           </footer>
         </div>

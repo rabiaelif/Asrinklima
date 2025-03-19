@@ -34,7 +34,7 @@ export default function RootLayout({
       <body>
       <ScrollToTop />
         <div className="flex flex-col min-h-screen">
-          <header className="hidden sm:flex">
+          <header className="">
             <Header />
           </header>
           <main className="flex-1">{children}</main>
