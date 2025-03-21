@@ -21,9 +21,16 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
-        isMenuOpen ? "bg-transparent" : isScrolled ? "bg-blue" : "bg-transparent"
-      }`}
+    className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
+      isMenuOpen && isScrolled
+        ? "lg:bg-blue"
+        : isMenuOpen
+        ? "bg-transparent"
+        : isScrolled
+        ? "bg-blue"
+        : "bg-transparent"
+    }`}
+
     >
       <nav className="mx-auto w-full flex justify-between items-center lg:px-6 px-4 py-4 container">
         {/* Logo */}

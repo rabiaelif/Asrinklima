@@ -21,7 +21,7 @@ const HomePage = () => {
 
                         Ev, ofis ve fabrika klimalarının tamir, bakım, onarım ve kiralama hizmetlerini sunmaktayız.</p>
                     <Link href="/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca" passHref>
-                        <button className="relative flex justify-between rounded-lg bg-white text-blue px-8 py-2.5 cursor-pointer text-base font-semibold w-[200px] transition-all duration-300 hover:text-blue hover:before:absolute hover:before:inset-0 hover:before:bg-black hover:before:opacity-10 hover:before:rounded-lg hover:before:content-[''] active:before:opacity-20">
+                        <button className="relative flex justify-between rounded-lg bg-white text-blue px-8 py-2.5 cursor-pointer text-base font-semibold w-[200px] transition-all duration-300 hover:text-blue hover:before:absolute hover:before:inset-0 hover:before:bg-black hover:before:opacity-10 hover:before:rounded-lg">
                             Detaylı İncele
                             <ArrowUpRight />
 

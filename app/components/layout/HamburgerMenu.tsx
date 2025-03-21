@@ -1,11 +1,11 @@
 "use client";
-import { useState, useLayoutEffect, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import HeaderButton from "./HeaderButton";
 import Logo from "./Logo";
 import { hizmetlerimiz } from "@/data/hizmetlerimiz";
+import Link from "next/link";
 
 interface HamburgerMenuProps {
   isMenuOpen: boolean;
@@ -13,19 +13,34 @@ interface HamburgerMenuProps {
 }
 
 export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const scrollYRef = useRef<number>(0);
-
   const isServicesPage = pathname?.includes("/hizmetlerimiz");
+  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 0);
+
   useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    
+    if (windowWidth >= 1024) {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+      return;
+    }
+
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
     }
-  }, [isMenuOpen]);
 
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [isMenuOpen, windowWidth]);
   return (
     <>
       <button
@@ -42,8 +57,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
         onClick={() => setIsMenuOpen(false)}
       >
         <div
-          className={`fixed bg-[#f6f6f6] inset-y-4 right-4 left-4 z-[9999] flex flex-col rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-[100vw]"
-            } menu-content`}
+          className={`fixed bg-[#f6f6f6] inset-y-4 right-4 left-4 z-[9999] flex flex-col rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-[100vw]"} menu-content`}
           onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
           <div className="w-full flex border-b-2 border-gray-200 justify-between items-center pb-4 p-6">
@@ -73,15 +87,10 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                     href={item.href}
                     text={item.text}
                     setIsMenuOpen={setIsMenuOpen}
-
                     className="text-lg font-medium hover:text-yellow text-center transition-all"
-                   
                   />
-
                 ))}
               </div>
-
-
 
               {hizmetlerimiz.map((service) => {
                 const isActive = pathname === `/hizmetlerimiz/${service.slug}`;
@@ -109,28 +118,28 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                         </Link>
 
                         {service.slug && service.subCategories && (
-                          <div className=" mt-2 space-y-2">
+                          <div className="mt-2 space-y-2">
                             {service.subCategories.map((sub) => {
                               const isSubActive =
                                 pathname === `/hizmetlerimiz/${service.slug}/${sub.slug}`;
 
                               return (
                                 <div className="" key={sub.slug}>
-                                  <Link
-                                    href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
-                                    onClick={(e) => {
-                                      setIsMenuOpen(false);
-                                      document.body.style.position = "";
-                                      document.body.style.top = "";
-                                      document.body.style.width = "";
-                                    }}
-                                    className={`block font-medium pl-12 mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
-                                        ? "bg-red/25 rounded-e-xl text-red"
-                                        : "hover:bg-[#F6F6F6] hover:text-red"
-                                      }`}
-                                  >
-                                    {sub.title}
-                                  </Link>
+                                <Link
+                                  href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
+                                  onClick={(e) => {
+                                    setIsMenuOpen(false);
+                                    document.body.style.position = "";
+                                    document.body.style.top = "";
+                                    document.body.style.width = "";
+                                  }}
+                                  className={`block font-medium pl-12 mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
+                                      ? "bg-red/25 rounded-e-xl text-red"
+                                      : "hover:bg-[#F6F6F6] hover:text-red"
+                                    }`}
+                                >
+                                  {sub.title}
+                                </Link>
                                 </div>
                               );
                             })}
@@ -139,9 +148,8 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                       </>
                     )}
                   </div>
-                )
+                );
               })}
-
             </nav>
           </div>
 

@@ -60,7 +60,7 @@ h1.no-before::before {
 }
 
 p {
-  @apply lg:text-base text-lg text-black font-medium my-4 lg:pb-4
+  @apply text-base lg:text-lg text-black font-medium my-4 lg:pb-4
 }
 
 progress-bar {
@@ -113,4 +113,8 @@ filler {
   .h-services::-webkit-scrollbar-thumb:hover {
     background-color: #F53E3E;
   }
+}
+.image-loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }

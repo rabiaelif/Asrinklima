@@ -3,12 +3,13 @@ import Image from "next/image"
 const ImageServices = () => {
     return (
         <div>
-    <div className="relative w-full h-[300px]">
+            <div className="relative w-full h-[300px]">
                 <Image
-                    src="/images/Chiller-sogutma-1 (1) (1).png"
+                    src="/images/ImageServices.webp"
                     alt="chiller"
                     fill
-                    className="absolute object-cover inset-0 z-0"
+                    priority={true}
+                    className="object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 
@@ -21,7 +22,7 @@ const ImageServices = () => {
                     boxShadow: "0 0 10px 50px rgba(255, 255, 255, 1)",
                 }}
             ></div>
-            </div>
+        </div>
     )
 }
 export default ImageServices

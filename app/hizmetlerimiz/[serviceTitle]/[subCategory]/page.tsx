@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import { hizmetlerimiz } from "@/data/hizmetlerimiz";
 
-export default function SubCategoryPage({
+export default async function SubCategoryPage({
   params,
 }: {
   params: { serviceTitle: string; subCategory: string };
 }) {
-  const { serviceTitle, subCategory } = params;
+  const { serviceTitle, subCategory } = await params;
 
   const service = hizmetlerimiz.find((s) => s.slug === serviceTitle);
 
@@ -29,7 +29,7 @@ export default function SubCategoryPage({
       </div>
 
       <div className="space-y-4 lg:hidden flex">
-        <h3 className="text-xl font-semibold"></h3>
+        <h3 className="text-xl font-semibold">Alt Kategoriler</h3>
         <ul className="space-y-2">
           {service.subCategories.map((sub) => (
             <li
@@ -46,14 +46,5 @@ export default function SubCategoryPage({
         </ul>
       </div>
     </div>
-  );
-}
-
-export async function generateStaticParams() {
-  return hizmetlerimiz.flatMap((service) =>
-    (service.subCategories || []).map((sub) => ({
-      serviceTitle: service.slug,
-      subCategory: sub.slug,
-    }))
   );
 }

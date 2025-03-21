@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
     return (
-        <section id="hakkımızda" className="relative flex items-center pt-24 pb-20  xl:py-28 overflow-hidden">
+        <section id="hakkımızda" className="relative flex items-center lg:pt-24 lg:pb-20 pt-16 pb-8 xl:py-28 overflow-hidden">
             <div className="container w-full mx-auto px-4 relative z-10">
                 <div className="container mx-auto items-center grid lg:grid-cols-2 gap-8 lg:gap-24 2xl:gap-0">
                     <div className="relative items-start lg:justify-start justify-center flex">
@@ -23,8 +23,8 @@ const AboutPage = () => {
                             <ImgButton text="ÇOK CAZİP FİYATLAR ve UYGUN ÖDEME KOŞULLARIYLA" />
                         </div>
                     </div>
-                    <div className="pl-2 space-y-6 max-lg:pt-4 2xl:translate-x-[-50px] lg:translate-x-[-30px] ">
-                        <div className="lg:border-l-3 border-blue h-18 pb-4 flex items-end lg:pl-3">
+                    <div className="pl-2 min-lg:pt-4 2xl:translate-x-[-50px] lg:translate-x-[-30px] ">
+                        <div className="lg:border-l-3 border-blue h-17 lg:h-18 lg:pb-4 pb-2 flex items-end lg:pl-3">
                             <h1 className="">Hakkımızda</h1>
                         </div>
                         <p className="max-w-[610px] text-black">Klima bakımı, farklı klima türleri ve modelleri için özelleştirilmiş işlemler gerektirir. Her bir klima türü, farklı bir motor mekanizmasıyla donatılmıştır ve bu nedenle bakım ihtiyaçları da değişiklik gösterir. Profesyonel bakım hizmeti, klimanın verimliliğini artırır ve uzun ömürlü olmasını sağlar, böylece kullanıcıya daha konforlu bir ortam sunar.</p>

@@ -2,7 +2,7 @@
 const HeaderOurServices = () => {
     return (
         <div className="mx-auto container px-4">
-            <div className="h-18 pb-4 flex items-end lg:pl-3">
+            <div className="h-18 lg:pb-4 pb-2 flex items-end lg:pl-3">
                 <h1>Hizmetlerimiz</h1>
             </div>
             <p className="text-black pl-3 pb-4 max-w-xl">

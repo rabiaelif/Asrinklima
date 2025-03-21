@@ -6,9 +6,9 @@ interface ImgButtonProps {
 
 const ImgButton : React.FC<ImgButtonProps> = ({ text }) => {
     return (
-        <div className="px-8 py-3 bg-blue border-3 border-[#EBEBED] rounded-lg z-10 flex items-center">
+        <div className="lg:px-8 py-3 px-6 bg-blue border-3 border-[#EBEBED] rounded-lg z-10 flex items-center">
               <span
-                className="text-white font-regular text-sm">
+                className="text-white font-regular lg:text-sm text-xs">
 
                 {text}
               </span>
