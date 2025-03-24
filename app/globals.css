@@ -63,22 +63,20 @@ p {
   @apply text-base lg:text-lg text-black font-medium my-4 lg:pb-4
 }
 
-progress-bar {
-  @apply relative h-5 w-80 border-2 border-solid border-amber-300
+.progress-bar {
+  @apply relative h-5 w-80 border-2 border-solid border-amber-300;
 }
 
-filler {
- @apply bg-yellow h-full text-inherit transition-all duration-200 ease-in w-0 hover:w-full
+.filler {
+  @apply bg-yellow h-full text-inherit transition-all duration-200 ease-in w-0 hover:w-full;
 }
-
-
 
 .swiper-wrapper {
   max-width: 100vw;
 }
 
 .swiper-slide {
-  @apply !w-[330px] !max-w-full !pb-14
+  @apply !w-[330px] !max-w-full !pb-14;
 }
 
 .swiper {
@@ -87,12 +85,25 @@ filler {
 }
 
 :root {
-  --swiper-pagination-color: #E6EF96;
-  --swiper-pagination-progressbar-bg-color: #EBEBED;
+  --swiper-pagination-color: #e6ef96;
+  --swiper-pagination-progressbar-bg-color: #ebebed;
 }
 
 .swiper-horizontal > .swiper-pagination-progressbar {
- @apply  !top-auto  !right-36 !w-auto
+  @apply !top-auto !right-36 !w-auto;
+}
+
+
+.swiper-pagination-progressbar {
+  @apply !h-1 !top-auto !bottom-0;
+}
+
+.swiper-slide {
+  @apply !mr-4;
+}
+
+.swiper-slide:last-child {
+  @apply !mr-0;
 }
 @layer components {
   .h-services::-webkit-scrollbar {

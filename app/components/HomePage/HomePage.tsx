@@ -1,10 +1,15 @@
-import TrsButton from "../layout/TransparentButton";
 import { CalendarIcon, PhoneIcon, } from "@heroicons/react/24/solid";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
+    const router = useRouter();
+
+    const handleClick = () => {
+      router.push("/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca");
+    };
+  
     return (
         <div className="container w-full mx-auto lg:px-8 px-4 relative z-10">
             <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center">
@@ -20,17 +25,19 @@ const HomePage = () => {
                     <p className="text-lg max-w-xl !text-white font-regular">
 
                         Ev, ofis ve fabrika klimalarının tamir, bakım, onarım ve kiralama hizmetlerini sunmaktayız.</p>
-                    <Link href="/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca" passHref>
-                        <button className="relative flex justify-between rounded-lg bg-white text-blue px-8 py-2.5 cursor-pointer text-base font-semibold w-[200px] transition-all duration-300 hover:text-blue hover:before:absolute hover:before:inset-0 hover:before:bg-black hover:before:opacity-10 hover:before:rounded-lg">
-                            Detaylı İncele
-                            <ArrowUpRight />
 
+                    <button
+                        onClick={handleClick}
+                        className="relative flex justify-between rounded-lg bg-white text-blue px-8 py-2.5 cursor-pointer text-base font-semibold w-[200px] transition-all  hover:text-blue hover:before:absolute hover:before:inset-0 hover:before:bg-black hover:before:opacity-10 hover:before:rounded-lg focus:outline-2 focus:outline-offset-2 hover:outline-2 hover:outline-offset-2 focus:outline-red/80 focus:text-red active:text-red"
+                    >
+                        Detaylı İncele
+                        <ArrowUpRight />
+                    </button>
 
-                        </button>
-                    </Link>
                     <div className="grid min-[400px]:grid-cols-2 grid-cols-1 gap-4 w-full justify-start sm:pt-6 pt-6 gap-x-4 lg:mr-10">
 
-                        <div className="bg-[#EDF9FF]/5 backdrop-blur-md rounded-lg p-4 flex justify-center w-full sm:w-[300px] max-h-[105px] hover:bg-white/10 transition-colors">
+                        <button onClick={() => window.location.href = "tel:+5380610334"}
+                            className="bg-[#EDF9FF]/5 backdrop-blur-md active:outline-2 active:outline-offset-2 cursor-pointer rounded-lg p-4 flex justify-center w-full sm:w-[300px] max-h-[105px] hover:bg-white/10 transition-colors ">
                             <div className="flex text-center items-center justify-center gap-4 sm:gap-12">
                                 <PhoneIcon className="h-6 w-6 text-yellow " />
                                 <div className="flex flex-col gap-2.5">
@@ -38,7 +45,7 @@ const HomePage = () => {
                                     <a href="tel:+5380610334" className="hover:underline font-regular text-center">+5388225559</a>
                                 </div>
                             </div>
-                        </div>
+                        </button>
 
                         <div className="bg-[#EDF9FF]/5 backdrop-blur-md rounded-lg p-4 gap-4 sm:gap-12 flex items-center justify-center w-full sm:w-[300px] max-h-[105px] hover:bg-white/10 transition-colors">
                             <CalendarIcon className="h-6 w-6 text-yellow stroke-3" />
