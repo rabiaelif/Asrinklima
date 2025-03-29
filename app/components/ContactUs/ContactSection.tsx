@@ -8,7 +8,7 @@ const ContactSection = () => {
                 <ChatBubbleLeftRightIcon className="h-9 w-9" />
                 <h1 className="text-3xl no-before font-semibold ml-2">Bize Ulaşın</h1>
             </div>
-            <p className="mt-4 leading-tight text-gray-600">
+            <p className="leading-tight text-base lg:text-lg text-black font-medium my-4 lg:pb-4">
                 <span>Klima ve soğutma çözümleriniz için profesyonel destek sunuyoruz!</span>
                 <br />
                 <br />

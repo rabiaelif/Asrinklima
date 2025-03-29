@@ -27,7 +27,7 @@ const AboutPage = () => {
                         <div className="lg:border-l-3 border-blue h-17 lg:h-18 lg:pb-4 pb-2 flex items-end lg:pl-3">
                             <h1 className="">Hakkımızda</h1>
                         </div>
-                        <p className="max-w-[610px] text-black">Klima bakımı, farklı klima türleri ve modelleri için özelleştirilmiş işlemler gerektirir. Her bir klima türü, farklı bir motor mekanizmasıyla donatılmıştır ve bu nedenle bakım ihtiyaçları da değişiklik gösterir. Profesyonel bakım hizmeti, klimanın verimliliğini artırır ve uzun ömürlü olmasını sağlar, böylece kullanıcıya daha konforlu bir ortam sunar.</p>
+                        <p className="max-w-[610px] text-base lg:text-lg font-medium my-4 lg:pb-4 text-black">Klima bakımı, farklı klima türleri ve modelleri için özelleştirilmiş işlemler gerektirir. Her bir klima türü, farklı bir motor mekanizmasıyla donatılmıştır ve bu nedenle bakım ihtiyaçları da değişiklik gösterir. Profesyonel bakım hizmeti, klimanın verimliliğini artırır ve uzun ömürlü olmasını sağlar, böylece kullanıcıya daha konforlu bir ortam sunar.</p>
                         <div className="flex items-center gap-4 lg:gap-6">
                             <div className="w-8 h-8 justify-center flex items-center rounded-lg shrink-0">
                                 <Handshake className="size-6 text-blue" />

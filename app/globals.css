@@ -25,7 +25,7 @@ body {
 
 @theme {
   --color-blue: #0E2954;
-  --color-white: #EDF9FF;
+  --color-whiteB: #EDF9FF;
   --color-red: #F53E3E;
   --color-yellow: #E6EF96;
   --color-black: #050506
@@ -59,9 +59,7 @@ h1.no-before::before {
   @apply content-none;
 }
 
-p {
-  @apply text-base lg:text-lg text-black font-medium my-4 lg:pb-4
-}
+
 
 .progress-bar {
   @apply relative h-5 w-80 border-2 border-solid border-amber-300;

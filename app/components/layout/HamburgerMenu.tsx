@@ -45,7 +45,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
     <>
       <button
         onClick={() => setIsMenuOpen(true)}
-        className={`relative z-[100] rounded-md p-1 text-white hover:bg-black/20 cursor-pointer hover:text-yellow focus:outline-none focus:ring-2 focus:ring-yellow ${isMenuOpen ? "hidden" : "block"
+        className={`relative z-[100] rounded-md p-1 text-whiteB hover:bg-black/20 cursor-pointer hover:text-yellow focus:outline-none focus:ring-2 focus:ring-yellow ${isMenuOpen ? "hidden" : "block"
           }`}
       >
         <Bars3Icon className="size-6 transition-all duration-300" />

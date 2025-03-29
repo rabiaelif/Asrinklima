@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      className={`fixed bottom-8 z-60 right-8 p-4  bg-red cursor-pointer text-white rounded-full shadow-lg shadow-black/40 transition-opacity ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`fixed bottom-8 z-60 right-8 p-4  bg-red cursor-pointer text-whiteB rounded-full shadow-lg shadow-black/40 transition-opacity ${isVisible ? "opacity-100" : "opacity-0"}`}
       onClick={scrollToTop}
     >
       <FaArrowUp />

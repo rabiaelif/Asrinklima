@@ -47,11 +47,11 @@ const HomeFooter = () => {
                         <div className="lg:col-span-1 col-span-2">
                             <h2 className="mb-2 text-yellow">İletişim</h2>
                             <div className="flex items-center gap-3 mb-2">
-                                <PhoneIcon className="h-5 w-5 text-white" />
+                                <PhoneIcon className="h-5 w-5 text-whiteB" />
                                 <a href="tel:+5388225559" className="hover:underline hover:text-[#ffffff]">+538 822 5559</a>
                             </div>
                             <div className="flex items-center gap-3">
-                                <EnvelopeIcon className="h-5 w-5 text-white" />
+                                <EnvelopeIcon className="h-5 w-5 text-whiteB" />
                                 <a href="mailto:info.aspar@gmail.com" className="hover:underline hover:text-[#ffffff]">info.aspar@gmail.com</a>
                             </div>
                         </div>

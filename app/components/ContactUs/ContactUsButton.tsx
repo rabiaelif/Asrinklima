@@ -8,7 +8,7 @@ const ContactUsButton = () => {
                 <div className="border-2 hover:border-red relative overflow-hidden border-[#D9D9D9] rounded-xl xl:p-6 lg:p-4 p-6 flex items-center">
                     <div className="flex items-center xl:gap-4 lg:gap-2 gap-4">
                         <div className="bg-red p-3 rounded-xl">
-                            <EnvelopeIcon className="h-6 w-6 text-white flex items-center justify-center" />
+                            <EnvelopeIcon className="h-6 w-6 text-whiteB flex items-center justify-center" />
                         </div>
                         <div className="lg:max-xl:w-[120px] overflow-hidden">
                             <h3 className="font-semibold">E-posta</h3>
@@ -25,7 +25,7 @@ const ContactUsButton = () => {
                 <div className="border-2 border-[#D9D9D9] hover:border-red rounded-xl xl:p-6 lg:p-4 p-6 flex items-center">
                     <div className="flex items-center xl:gap-4 lg:gap-2 gap-4">
                         <div className="bg-red p-3 rounded-xl" >
-                            <PhoneIcon className="h-6 w-6 text-white flex items-center justify-center" />
+                            <PhoneIcon className="h-6 w-6 text-whiteB flex items-center justify-center" />
                         </div>
                         <div>
                             <h3 className="font-semibold">Telefon</h3>

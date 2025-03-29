@@ -67,7 +67,7 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
     <Link href={href} className={className}>
       <span
         onClick={handleClick}
-        className={`font-medium transition-colors bg-transparent border-hidden text-base hover:text-yellow cursor-pointer ${setIsMenuOpen ? "text-black" : "text-white"
+        className={`font-medium transition-colors bg-transparent pb-1 hover:border-b border-yellow text-base hover:text-yellow cursor-pointer ${setIsMenuOpen ? "text-black" : "text-whiteB"
         } `}
       >
         {text}

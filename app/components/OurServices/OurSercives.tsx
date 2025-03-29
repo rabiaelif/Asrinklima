@@ -32,8 +32,8 @@ function titleToSlug(title: string): string {
 
 const services: Service[] = [
   { title: "Split Klima Bakım, Onarım ve Yedek Parça", img: "/images/split_klima.jpg" },
-  { title: "Chiller Revizyon Onarım!", img: "/images/chiller.jpg" },
-  { title: "Rooftop Klima Arıza, Bakım ve Onarım.", img: "/images/rooftop.jpg" },
+  { title: "Chiller Revizyon Onarım", img: "/images/chiller.jpg" },
+  { title: "Rooftop Klima Arıza, Bakım ve Onarım", img: "/images/rooftop.jpg" },
   { title: "VRF Klima Sistemleri", img: "/images/vrf.jpg" },
   { title: "Klima Santrali Bakım ve Onarım", img: "/images/klima_santrali.jpg" },
   { title: "Pano Klima Bakım ve Onarım", img: "/images/pano.png" },
@@ -136,7 +136,7 @@ export default function OurServices() {
                   disabled={isFirstSlide}
                 >
                   <ArrowLeft
-                    className={`h-6 w-6 ${isFirstSlide ? "text-[#B6B6B6]" : "text-white"}`}
+                    className={`h-6 w-6 ${isFirstSlide ? "text-[#B6B6B6]" : "text-whiteB"}`}
                   />
                 </button>
                 <button
@@ -145,7 +145,7 @@ export default function OurServices() {
                   disabled={isLastSlide}
                 >
                   <ArrowRight
-                    className={`h-6 w-6 ${isLastSlide ? "text-[#B6B6B6]" : "text-white"}`}
+                    className={`h-6 w-6 ${isLastSlide ? "text-[#B6B6B6]" : "text-whiteB"}`}
                   />
                 </button>
               </div>

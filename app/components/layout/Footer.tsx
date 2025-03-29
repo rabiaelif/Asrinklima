@@ -38,11 +38,11 @@ const Footer = () => {
             <div className="mb-4 xl:mb-0">
               <h2 className="mb-2 text-yellow text-sm sm:text-base">İletişim</h2>
               <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
-                <PhoneIcon className="h-5 w-5 text-white" />
+                <PhoneIcon className="h-5 w-5 text-whiteB" />
                 <a href="tel:+5388225559" className="hover:underline hover:text-[#ffffff]">+538 822 5559</a>
               </div>
               <div className="flex items-center gap-2 text-xs sm:text-sm">
-                <EnvelopeIcon className="h-5 w-5 text-white" />
+                <EnvelopeIcon className="h-5 w-5 text-whiteB" />
                 <a href="mailto:info.aspar@gmail.com" className="hover:underline hover:text-[#ffffff]">info.aspar@gmail.com</a>
               </div>
             </div>
