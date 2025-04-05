@@ -21,7 +21,7 @@ export default function ServicesLayout({
         <div className="flex-1">
           <div id="top"></div>
 
-          <main className="relative min-h-screen mx-auto w-full lg:px-6 px-4 container p-4 z-30">
+          <main className="relative min-h-screen mx-auto w-full lg:px-8 container p-4 z-30">
             {children}
           </main>
 

@@ -13,6 +13,8 @@ interface Service {
   title: string;
   img: string;
   slug: string;
+  parentSlug?: string;
+
 }
 
 function titleToSlug(title: string): string {
@@ -32,18 +34,34 @@ function titleToSlug(title: string): string {
 
 const services: Service[] = [
   { title: "Split Klima Bakım, Onarım ve Yedek Parça", img: "/images/split_klima.jpg" },
-  { title: "Chiller Revizyon Onarım", img: "/images/chiller.jpg" },
+  { title: "Chiller Revizyon ve Onarım", img: "/images/chiller.jpg" },
   { title: "Rooftop Klima Arıza, Bakım ve Onarım", img: "/images/rooftop.jpg" },
   { title: "VRF Klima Sistemleri", img: "/images/vrf.jpg" },
   { title: "Klima Santrali Bakım ve Onarım", img: "/images/klima_santrali.jpg" },
   { title: "Pano Klima Bakım ve Onarım", img: "/images/pano.png" },
-  { title: "Soğuk Oda İmalat Ve Onarım", img: "/images/soğuk_oda.png" },
-  { title: "Havuz Nem Alma Cihazı", img: "/images/havuz_nem_alma_cihazlari.jpg" },
+  {
+    title: "Soğuk Oda İmalat Ve Onarım",
+    img: "/images/soğuk_oda.png",
+    parentSlug: titleToSlug("İklimlendirme Hizmetleri")
+  },
+  {
+    title: "Havuz Nem Alma Cihazı",
+    img: "/images/havuz_nem_alma_cihazlari.jpg",
+    parentSlug: titleToSlug("İklimlendirme Hizmetleri")
+  },
   { title: "Hastane Hijyenik Klima Bakımı Ve Onarımı", img: "/images/hastane_hijyenik_klima.jpg" },
-  { title: "DX Soğutma Sistemleri", img: "/images/dx_soğutma_sistemleri.jpeg" },
-  { title: "Kanal Temizliği", img: "/images/kanal_temizliği2.jpg" },
-  { title: "Klima Cihaz Kiralama", img: "/images/klima_kiralama.jpg" },
-  { title: "Veri Merkezi ", img: "/images/veri_merkezi.jpg" },
+  { title: "DX Soğutma Sistemleri Bakım ve Onarım", img: "/images/dx_soğutma_sistemleri.jpeg" },
+  {
+    title: "Kanal Temizliği",
+    img: "/images/kanal_temizliği2.jpg",
+    parentSlug: titleToSlug("İklimlendirme Hizmetleri")
+  },
+  { title: "Klima Kiralama", img: "/images/klima_kiralama.jpg" },
+  {
+    title: "Veri Merkezi Soğutma",
+    img: "/images/veri_merkezi.jpg",
+    parentSlug: titleToSlug("Hassas Klima Bakım, Onarım ve Yedek Parça")
+  }, 
 ].map((service) => ({
   ...service,
   slug: titleToSlug(service.title),
@@ -106,7 +124,12 @@ export default function OurServices() {
                       <h3 className="text-lg w-[235px] font-regular leading-tight text-black">
                         {service.title}
                       </h3>
-                      <Link href={`/hizmetlerimiz/${titleToSlug(service.title)}`} passHref>
+                      <Link href={
+                        service.parentSlug
+                          ? `/hizmetlerimiz/${service.parentSlug}/${service.slug}`
+                          : `/hizmetlerimiz/${service.slug}`
+                      }
+                        passHref>
                         <div className="p-3 bg-[#ffffff] rounded-full hover:bg-[#DDDDDD] text-black">
                           <ArrowUpRight className="size-4" />
                         </div>

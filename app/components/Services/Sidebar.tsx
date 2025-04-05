@@ -69,7 +69,7 @@ const Sidebar = React.memo(() => {
         >
           <Link href={`/hizmetlerimiz/${service.slug}`} passHref>
             <button
-              className={`w-full p-2 py-3 text-black/80 rounded-none hover:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold text-primary dark:text-primary-dark
+              className={`w-full p-2 py-3 text-black/80 rounded-none hover:rounded-e-2xl active:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold
               ${isActive
                   ? "bg-red/25 rounded-e-2xl text-red"
                   : "hover:bg-gray-100 hover:text-red"

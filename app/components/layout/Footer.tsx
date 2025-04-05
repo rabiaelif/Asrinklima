@@ -30,7 +30,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
               <li><a href="#" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
               <li><a href="#" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Hassas Klima Bakım ve Onarım ve Yedek Parça</a></li>
+              <li><a href="#" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
             </ul>
           </div>
 

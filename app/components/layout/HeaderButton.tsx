@@ -57,8 +57,10 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      let offset = 80;
+      if (id === "hakkımızda") {
+        offset = 40;
+      } const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
   };
@@ -68,7 +70,7 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
       <span
         onClick={handleClick}
         className={`font-medium transition-colors bg-transparent pb-1 hover:border-b border-yellow text-base hover:text-yellow cursor-pointer ${setIsMenuOpen ? "text-black" : "text-whiteB"
-        } `}
+          } `}
       >
         {text}
       </span>

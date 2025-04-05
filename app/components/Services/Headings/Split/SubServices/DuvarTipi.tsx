@@ -2,19 +2,20 @@
 import React from "react";
 import { FaTools, FaShieldAlt, FaSnowflake, FaTint, FaBolt, FaGasPump, FaFan, FaCalendarAlt, FaWind, FaPiggyBank } from "react-icons/fa";
 import IssueCard from "../../../IssueCard";
+import Image from "next/image";
 
 const DuvarTipi = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl  max-lg:pt-6 px-3">
       <section className="text-start mb-10">
-        <div className="text-lg text-black/80 max-w-4xl">
+        <div className="text-black/90 max-w-4xl">
           <p>
             Duvar tipi klimalar, ev ve ofis ortamlarında yaygın olarak tercih edilen iklimlendirme çözümleridir. Bu klimalar, duvara monte edilen iç ünite ve dış üniteden oluşan split sistem prensibine göre çalışır.
           </p>
         </div>
       </section>
 
-      <section className="mb-16 bg-blue-50 rounded-xl p-6  shadow-sm">
+      <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
@@ -67,7 +68,8 @@ const DuvarTipi = () => {
           />
 
           <IssueCard
-            icon={FaGasPump}
+            icon={<Image src="/icon/refrigerantgas1.png"
+              alt="Refrigerant" width={24} height={24} />}
             title="Soğutucu Gaz Kontrolü ve Dolumu"
             content="Soğutucu gaz seviyesi eksik veya düşükse, performans kaybına yol açar. Gaz dolumu yapılmadan önce, gaz kaçağının tespiti için azot testi uygulanmalı ve kaçağın giderilmesinin ardından gaz seviyesi tamamlanmalıdır."
             className=" hover:shadow-md transition-shadow"

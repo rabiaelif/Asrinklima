@@ -106,7 +106,7 @@ export const hizmetlerimiz: Service[] = [
     component:Iklimlendirme ,
     subCategories: [
       { title: "Soğuk Oda İmalat ve Onarım", component: SoğukOda },
-      { title: "Havuz Nem Alma Cihazları", component: HavuzNem },
+      { title: "Havuz Nem Alma Cihazı", component: HavuzNem },
       { title: "Kanal Temizliği", component: KanalTemizliği },
       { title: "Yeniden Kurulum", component: YenidenKurulum },
     ],
@@ -122,7 +122,7 @@ export const hizmetlerimiz: Service[] = [
     component: Dx,
   },
   {
-    title: "Hassas Klima Bakım ve Onarım ve Yedek Parça",
+    title: "Hassas Klima Bakım, Onarım ve Yedek Parça",
     img: "/hassasklima.jpg",
     component: HassasKlima,
     subCategories: [
@@ -131,7 +131,7 @@ export const hizmetlerimiz: Service[] = [
     ],
   },
   {
-    title: "Klima Kiralama Hizmeti",
+    title: "Klima Kiralama",
     img: "/diger.jpg",
     component: KlimaKiralama,
   },
