@@ -21,7 +21,7 @@ export default function FanCoil() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Fan Coil Sistemlerinde Bakımın Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Fan Coil Sistemlerinin Bakımı Neden Önemlidir?</h2>
           </div>
         </div>
         <p className="mb-8">Fan coil ünitelerinin (FCU) düzenli bakımı, aşağıdaki nedenlerle büyük önem taşır:</p>

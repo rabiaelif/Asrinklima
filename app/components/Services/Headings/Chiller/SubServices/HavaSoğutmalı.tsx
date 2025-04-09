@@ -22,7 +22,7 @@ export default function HavaSoğutmalı() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Hava Soğutmalı Chiller'da Bakım ve Onarım</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Hava Soğutmalı Chiller'da Bakım ve Onarım Neden Önemlidir?</h2>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export default function HavaSoğutmalı() {
 
       <section className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
-          <h2 className="text-2xl font-bold text-blue-800">Yaygın Sorunlar ve Çözümleri</h2>
+          <h2 className="text-2xl font-bold text-blue-800">Hava Soğutmalı Chiller'da Yaygın Sorunlar ve Çözümleri</h2>
         </div>
         <div className="space-y-8">
           {/* 1. Yetersiz Soğutma Kapasitesi */}

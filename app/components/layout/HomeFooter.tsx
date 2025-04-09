@@ -1,16 +1,14 @@
 'use client'
 import { usePathname } from "next/navigation";
-import Footer from "./Footer";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 const HomeFooter = () => {
     const pathname = usePathname();
 
-    // Eğer sayfa "hizmetlerimiz" sayfası ise, footer'ı göstermiyoruz
     const isServicesPage = pathname?.includes("/hizmetlerimiz");
 
-    if (isServicesPage) return null; // Eğer "hizmetlerimiz" sayfasıysa, footer'ı döndürmüyoruz
+    if (isServicesPage) return null;
 
     return (
         <div className="bg-blue text-gray-300 py-10">
@@ -58,12 +56,12 @@ const HomeFooter = () => {
                         <div className="pr-4">
                             <div className="flex gap-4">
                                 <div className="p-2 bg-white rounded-full">
-                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
+                                    <a href="https://www.facebook.com/hakansahin84" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
                                         <FaFacebookF size={20} />
                                     </a>
                                 </div>
                                 <div className="p-2 bg-white rounded-full">
-                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
+                                    <a href="https://www.instagram.com/asrlnklima/" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
                                         <FaInstagram size={20} />
                                     </a>
                                 </div>

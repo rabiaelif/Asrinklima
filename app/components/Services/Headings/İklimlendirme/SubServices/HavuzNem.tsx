@@ -24,7 +24,7 @@ const HavuzNem = () => {
       <section className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <h2 className="text-2xl font-bold text-blue-800">
-            Sık Karşılaşılan Sorunlar ve Çözümleri
+          Havuz Nem Alma Cihazlarında Sık Karşılaşılan Sorunlar ve Çözümleri
           </h2>
         </div>
         <div className="space-y-4">

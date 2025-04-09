@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { FaTools, FaShieldAlt, FaSnowflake, FaTint, FaBolt, FaGasPump, FaFan, FaCalendarAlt, FaWind, FaPiggyBank } from "react-icons/fa";
+import { FaTools, FaShieldAlt, FaSnowflake, FaBolt, FaFan } from "react-icons/fa";
 import IssueCard from "../../../IssueCard";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const YerTavan = () => {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Bakım ve Onarımın Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Yer Tavan Split Klima Bakımı Neden Önemli?</h2>
           </div>    </div>
 
         <div className="grid md:grid-cols-2 gap-6">

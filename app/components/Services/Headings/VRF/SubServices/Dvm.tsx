@@ -25,7 +25,7 @@ export default function Dvm() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Samsung DVM VRF Bakımının Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Samsung DVM VRF Bakımı Neden Önemlidir?</h2>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ export default function Dvm() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-blue-800 mb-6">Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
+        <h2 className="text-2xl font-bold text-blue-800 mb-6">Samsung DVM VRF Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
         <div className="space-y-4">
           <IssueCard
             title="Sistem Çalışmıyor veya Düşük Performans"

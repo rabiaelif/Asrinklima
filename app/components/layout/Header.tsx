@@ -39,7 +39,7 @@ const Header = () => {
         <div className="space-x-4 xl:mr-40 lg:space-x-8 hidden text-whiteB lg:flex justify-center w-full items-center h-full">
           <HeaderButton href="#anasayfa" text="ANASAYFA" />
           <HeaderButton href="#hizmetlerimiz" text="HİZMETLERİMİZ" />
-          <HeaderButton href="#kiralama" text="KİRALAMA" />
+          <HeaderButton href="/hizmetlerimiz/klima-kiralama" text="KİRALAMA" />
           <HeaderButton href="#hakkımızda" text="HAKKIMIZDA" />
           <HeaderButton href="#iletişim" text="İLETİŞİM" />
         </div>

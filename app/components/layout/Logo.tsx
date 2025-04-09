@@ -15,18 +15,22 @@ const Logo: React.FC<LogoProps> = ({ isMenuOpen }) => {
             alt="Logo"
             width={50}
             height={50}
-            className="mr-3 md:w-[70px] 2xl:w-[70px] h-auto"/>
-            <div className="flex flex-col">
-              <div>
-          <span className="text-red">ASRIN</span>
-          <span
-            className={`text-whiteB ${isMenuOpen ? "max-lg:text-black" : "text-whiteB"}`}
-          >
-            KLİMA
-          </span>
-          </div>
+            style={{ height: 50, width: 50 }}
+            className="mr-3 md:w-[50px] 2xl:w-[50px] h-auto"
+          />
 
-          <span className="text-xs text-center text-whiteB">SOĞUTMA VE İKLİMLENDİRME</span>
+          <div className="flex flex-col">
+            <div>
+              <span className="text-red">ASRIN</span>
+              <span
+                className={`text-whiteB ${isMenuOpen ? "max-lg:text-black" : "text-whiteB"}`}
+              >
+                KLİMA
+              </span>
+            </div>
+
+            <span className={`text-whiteB text-center text-xs ${isMenuOpen ? "max-lg:text-black " : "text-whiteB"}`}
+            >SOĞUTMA VE İKLİMLENDİRME</span>
           </div>
         </div>
       </Link>

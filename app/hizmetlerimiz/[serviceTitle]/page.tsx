@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function ServiceDetail({
   params,
 }: {
-  params: { serviceTitle: string; subCategoryTitle?: string }; // Alt kategori başlığı da ekleniyor
+  params: { serviceTitle: string; subCategoryTitle?: string };
 }) {
   const { serviceTitle } = await params;
 
@@ -22,6 +22,7 @@ export default async function ServiceDetail({
       "rooftop-klima-ariza-bakim-ve-onarim": "Rooftoplarınız",
       "vrf-klima-sistemleri": "VRF Sistemleriniz",
       "klima-santrali-bakim-ve-onarim": "Klima Santrallarınız",
+      "pano-klima-bakim-ve-onarim": "Pano Klimalarınız",
       "iklimlendirme-hizmetleri": "İklimlendirme Hizmetleriniz",
       "hastane-hijyenik-klima-bakimi-ve-onarimi": "Hastane Hijyenik Klimalarınız",
       "dx-sogutma-sistemleri-bakim-ve-onarim": "DX Soğutma Sistemleriniz",
@@ -38,6 +39,7 @@ export default async function ServiceDetail({
       "rooftop-klima-ariza-bakim-ve-onarim": "Rooftop",
       "vrf-klima-sistemleri": "VRF",
       "klima-santrali-bakim-ve-onarim": "Klima Santrali",
+      "pano-klima-bakim-ve-onarim": "Pano Klima",
       "iklimlendirme-hizmetleri": "İklimlendirme",
       "hastane-hijyenik-klima-bakimi-ve-onarimi": "Hastane Hijyenik Klima",
       "dx-sogutma-sistemleri-bakim-ve-onarim": "DX Soğutma Sistemleri",
@@ -52,27 +54,30 @@ export default async function ServiceDetail({
 
   const ServiceComponent = service.component;
 
-  const isKlimaKiralama = serviceTitle === "klima-kiralama";
+  const isKlimaKiralama = serviceTitle === "klima-kiralama"|| serviceTitle === "ariza-kodlari";
+  const isErrorCodesPage = serviceTitle === "ariza-kodlari";
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-bold no-before text-blue-800 mb-4">
-        {service.title} Hizmetleri
-      </h1>
+      {!isErrorCodesPage && (
+        <h1 className="text-3xl md:text-4xl font-bold no-before text-blue-800 mb-4">
+          {service.title} Hizmetleri
+        </h1>
+      )}
 
       {Array.isArray(service.subCategories) && service.subCategories.length > 0 && (
         <div className="space-y-4 mx-4 lg:hidden flex flex-col">
           <h3 className="text-xl font-semibold text-black">Alt Kategoriler</h3>
           <ul className="space-y-1 flex flex-col">
             {service.subCategories.map((sub) => (
-                <Link
-                  key={sub.title}
+              <Link
+                key={sub.title}
 
-                  href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
-                  className={`cursor-pointer w-40 p-2 rounded-lg hover:bg-gray-200`}
-                  >
-                  {sub.title}
-                </Link>
+                href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
+                className={`cursor-pointer w-40 p-2 rounded-lg hover:bg-gray-200`}
+              >
+                {sub.title}
+              </Link>
             ))}
           </ul>
         </div>

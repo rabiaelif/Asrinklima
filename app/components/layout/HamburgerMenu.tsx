@@ -20,7 +20,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-    
+
     if (windowWidth >= 1024) {
       document.body.style.overflow = "auto";
       document.documentElement.style.overflow = "auto";
@@ -41,6 +41,9 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
       document.documentElement.style.overflow = "auto";
     };
   }, [isMenuOpen, windowWidth]);
+
+  const isHizmetlerPage = pathname?.includes("/hizmetlerimiz");
+
   return (
     <>
       <button
@@ -72,13 +75,13 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto py-4">
-            <nav className="space-y-4 w-full text-black flex flex-col items-center">
-              <div className={`justify-center px-6 w-full text-black ${isServicesPage ? "md:space-y-4 space-y-3 gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5" : "flex flex-col space-y-4"}`}>
+          <div className="flex-1 overflow-y-auto py-4 flex justify-center">
+            <nav className={`space-y-4 w-full text-black flex flex-col items-center ${isServicesPage ? "": "mt-8 pl-6"} `}>
+              <div className={`justify-center px-6 w-full text-black ${isServicesPage ? "md:space-y-4  space-y-3 gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5" : "flex flex-col space-y-4"}`}>
                 {[
                   { href: "#anasayfa", text: "ANASAYFA" },
                   { href: "#hizmetlerimiz", text: "HİZMETLERİMİZ" },
-                  { href: "#kiralama", text: "KİRALAMA" },
+                  { href: "/hizmetlerimiz/klima-kiralama", text: "KİRALAMA" },
                   { href: "#hakkımızda", text: "HAKKIMIZDA" },
                   { href: "#iletişim", text: "İLETİŞİM" },
                 ].map((item, index) => (
@@ -87,8 +90,8 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                     href={item.href}
                     text={item.text}
                     setIsMenuOpen={setIsMenuOpen}
-                    className="text-lg font-medium hover:text-yellow text-center transition-all"
-                  />
+                    className={`font-medium transition-all ${isHizmetlerPage ? 'text-center' : ''}`}
+                    />
                 ))}
               </div>
 
@@ -125,21 +128,21 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
 
                               return (
                                 <div className="" key={sub.slug}>
-                                <Link
-                                  href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
-                                  onClick={(e) => {
-                                    setIsMenuOpen(false);
-                                    document.body.style.position = "";
-                                    document.body.style.top = "";
-                                    document.body.style.width = "";
-                                  }}
-                                  className={`block font-medium pl-12 mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
+                                  <Link
+                                    href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
+                                    onClick={(e) => {
+                                      setIsMenuOpen(false);
+                                      document.body.style.position = "";
+                                      document.body.style.top = "";
+                                      document.body.style.width = "";
+                                    }}
+                                    className={`block font-medium pl-12 mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
                                       ? "bg-red/25 rounded-e-xl text-red"
                                       : "hover:bg-[#F6F6F6] hover:text-red"
-                                    }`}
-                                >
-                                  {sub.title}
-                                </Link>
+                                      }`}
+                                  >
+                                    {sub.title}
+                                  </Link>
                                 </div>
                               );
                             })}
@@ -156,7 +159,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
           <div className="w-full flex flex-col items-center space-y-4 p-6">
             <div className="flex items-center gap-2 text-black">
               <span className="text-xl">📞</span>
-              <a href="tel:+90 5555555555">+90 5555555555</a>
+              <a href="tel:+90 5388225559">+90 5388225559</a>
             </div>
           </div>
         </div>

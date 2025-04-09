@@ -18,7 +18,7 @@ export default function Vrf() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">VRF Sistemlerinde Bakım ve Onarım</h2>
+            <h2 className="text-2xl font-bold text-blue-800">VRF Sistemlerinde Bakım ve Onarım Neden Önemlidir?</h2>
           </div>
         </div>
 

@@ -20,7 +20,7 @@ export default function Iklimlendirme() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">İklimlendirme Hizmetlerinin Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">İklimlendirme Hizmetleri Neden Önemlidir?</h2>
           </div>
         </div>
 

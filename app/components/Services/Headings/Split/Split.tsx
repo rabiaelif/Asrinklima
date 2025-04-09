@@ -1,6 +1,6 @@
 'use client'
 
-import { FaTools, FaExclamationTriangle, FaShieldAlt, FaBolt, FaTemperatureLow } from 'react-icons/fa';
+import { FaExclamationTriangle, FaShieldAlt } from 'react-icons/fa';
 import IssueCard from "../../IssueCard";
 import ElektronikKartArizalari from "../../ElektoronikKart";
 
@@ -18,7 +18,7 @@ const Split = () => {
       <section className="mb-16 bg-blue-50 rounded-xl p-6 shadow-sm">
         <div className="flex items-center mb-4">
           <FaShieldAlt className="text-blue-600 text-2xl mr-3" />
-          <h2 className="text-2xl font-semibold text-blue-800">Düzenli Bakımın Önemi</h2>
+          <h2 className="text-2xl font-semibold text-blue-800">Split Klima Bakımı Neden Önemlidir?</h2>
         </div>
         <div className="space-y-4 text-black/80">
           <p>
@@ -37,23 +37,23 @@ const Split = () => {
         </div>
         <div className="space-y-6">
 
-        <IssueCard
-          title="Soğutma Performansında Azalma"
-          cause="Bu durum genellikle kirli hava filtreleri, düşük soğutucu gaz seviyesi veya tıkanmış hava kanallarından kaynaklanır. Split klima iç ünite fanının pervane kanalları dolduğunda, hava akışı yetersiz hale gelir."
-          solution="Öncelikle, hava filtrelerini düzenli olarak temizlemek veya gerektiğinde değiştirmek önemlidir. Soğutucu gaz seviyesinin kontrol edilmesi ve eksikse gaz dolumu yapılması gerekir. Ayrıca, hava kanallarının tıkanıklık açısından incelenmesi ve temizlenmesi, cihazın verimli çalışmasını sağlar."
-        />
+          <IssueCard
+            title="Soğutma Performansında Azalma"
+            cause="Bu durum genellikle kirli hava filtreleri, düşük soğutucu gaz seviyesi veya tıkanmış hava kanallarından kaynaklanır. Split klima iç ünite fanının pervane kanalları dolduğunda, hava akışı yetersiz hale gelir."
+            solution="Öncelikle, hava filtrelerini düzenli olarak temizlemek veya gerektiğinde değiştirmek önemlidir. Soğutucu gaz seviyesinin kontrol edilmesi ve eksikse gaz dolumu yapılması gerekir. Ayrıca, hava kanallarının tıkanıklık açısından incelenmesi ve temizlenmesi, cihazın verimli çalışmasını sağlar."
+          />
 
 
-        <IssueCard
-          title="Kompresör Arızaları"
-          cause=" Aşırı ısınma, elektriksel sorunlar veya yetersiz yağlama, kompresörün arızalanmasına neden olabilir."
-          solution="Kompresör arızaları ciddi sorunlardır ve profesyonel müdahale gerektirir. Uzman bir teknisyen tarafından kompresörün detaylı bir şekilde incelenmesi, gerekli onarımların yapılması veya gerektiğinde kompresörün değiştirilmesi önerilir."
-        />
-        <IssueCard
-          title="Su Sızıntıları"
-          cause="Tıkalı drenaj hatları veya hasarlı drenaj tavası, su sızıntılarına yol açabilir."
-          solution=" Drenaj hattının tıkanıklık açısından kontrol edilerek temizlenmesi, drenaj tavasının hasar durumunun incelenmesi ve gerekirse onarılması veya değiştirilmesi gereklidir. Bu işlemler, su sızıntılarının önlenmesine yardımcı olur."
-        /></div>
+          <IssueCard
+            title="Kompresör Arızaları"
+            cause=" Aşırı ısınma, elektriksel sorunlar veya yetersiz yağlama, kompresörün arızalanmasına neden olabilir."
+            solution="Kompresör arızaları ciddi sorunlardır ve profesyonel müdahale gerektirir. Uzman bir teknisyen tarafından kompresörün detaylı bir şekilde incelenmesi, gerekli onarımların yapılması veya gerektiğinde kompresörün değiştirilmesi önerilir."
+          />
+          <IssueCard
+            title="Su Sızıntıları"
+            cause="Tıkalı drenaj hatları veya hasarlı drenaj tavası, su sızıntılarına yol açabilir."
+            solution=" Drenaj hattının tıkanıklık açısından kontrol edilerek temizlenmesi, drenaj tavasının hasar durumunun incelenmesi ve gerekirse onarılması veya değiştirilmesi gereklidir. Bu işlemler, su sızıntılarının önlenmesine yardımcı olur."
+          /></div>
 
         <ElektronikKartArizalari />
       </section>

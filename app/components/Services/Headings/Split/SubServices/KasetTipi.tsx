@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { FaTools, FaShieldAlt, FaSnowflake, FaTint, FaBolt, FaGasPump, FaFan, FaCalendarAlt, FaWind, FaPiggyBank } from "react-icons/fa";
+import { FaShieldAlt } from "react-icons/fa";
 import IssueCard from "../../../IssueCard";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const Kanallı = () => {
         <div className="border-l-4 border-blue-800 pl-4 mb-4">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Bakım ve Onarımın Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Kaset Tipi Split Klima Bakımı Neden Önemli?</h2>
           </div>
         </div>
         <p className="mb-8">Kanallı klimanın periyodik bakımı, cihazın ömrünü uzatır, enerji verimliliğini artırır ve beklenmedik arızaların önüne geçer. Ayrıca, temiz filtreler sayesinde iç hava kalitesi yükselir.</p>

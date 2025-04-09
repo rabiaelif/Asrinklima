@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaTools, FaShieldAlt, FaSnowflake, FaTint, FaBolt, FaGasPump, FaFan, FaCalendarAlt, FaWind, FaPiggyBank, FaWater, FaMicrochip, FaExternalLinkAlt, FaFilter, FaAirFreshener, FaCogs, FaIndustry } from "react-icons/fa";
+import { FaTools, FaShieldAlt, FaSnowflake, FaTint, FaBolt, FaFan, FaIndustry } from "react-icons/fa";
 import IssueCard from "../../../IssueCard";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ export default function Kanallı() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Kanallı Klima Bakımının Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Kanallı Split Klima Bakımı Neden Önemli?</h2>
           </div>
         </div>
 

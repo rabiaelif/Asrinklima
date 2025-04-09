@@ -1,4 +1,5 @@
 
+import ArızaKodları from "@/app/components/Services/Headings/ArızaKodları/ArızaKodları";
 import Chiller from "@/app/components/Services/Headings/Chiller/Chiller";
 import FanCoil from "@/app/components/Services/Headings/Chiller/SubServices/FanCoil";
 import HavaSoğutmalı from "@/app/components/Services/Headings/Chiller/SubServices/HavaSoğutmalı";
@@ -15,6 +16,7 @@ import SoğukOda from "@/app/components/Services/Headings/İklimlendirme/SubServ
 import YenidenKurulum from "@/app/components/Services/Headings/İklimlendirme/SubServices/YenidenKurulum";
 import KlimaKiralama from "@/app/components/Services/Headings/Klima Kiralama/KlimaKiralama";
 import KlimaSantrali from "@/app/components/Services/Headings/Klima Santrali/KlimaSantrali";
+import PanoKlima from "@/app/components/Services/Headings/Pano Klima/PanoKlima";
 import Rooftop from "@/app/components/Services/Headings/Rooftop/Rooftop";
 import Split from "@/app/components/Services/Headings/Split/Split";
 import DuvarTipi from "@/app/components/Services/Headings/Split/SubServices/DuvarTipi";
@@ -51,7 +53,6 @@ interface SubCategory {
 
 interface Service {
   title: string;
-  img: string;
   slug: string;
   component: React.ComponentType;
   subCategories?: SubCategory[];
@@ -73,7 +74,6 @@ export const hizmetlerimiz: Service[] = [
   },
   {
     title: "Chiller Revizyon ve Onarım",
-    img: "/chiller.jpg",
     component: Chiller,
     subCategories: [
       { title: "Fan Coil Sistemleri", component: FanCoil },
@@ -83,12 +83,10 @@ export const hizmetlerimiz: Service[] = [
   },
   {
     title: "Rooftop Klima Arıza, Bakım ve Onarım",
-    img: "/rooftop.jpg",
     component: Rooftop,
   },
   {
     title: "VRF Klima Sistemleri",
-    img: "/vrfklima.jpg",
     component: Vrf,
     subCategories: [
       { title: "VRF Alt Yapı Borulama Hazırlığı", component: VrfAltYapı },
@@ -97,12 +95,14 @@ export const hizmetlerimiz: Service[] = [
   },
   {
     title: "Klima Santrali Bakım ve Onarım",
-    img: "/klimasantrali.jpg",
     component: KlimaSantrali,
   },
   {
+    title: "Pano Klima Bakım ve Onarım",
+    component: PanoKlima,
+  },
+  {
     title: "İklimlendirme Hizmetleri",
-    img: "/iklimlendirme.jpg",
     component:Iklimlendirme ,
     subCategories: [
       { title: "Soğuk Oda İmalat ve Onarım", component: SoğukOda },
@@ -113,17 +113,14 @@ export const hizmetlerimiz: Service[] = [
   },
   {
     title: "Hastane Hijyenik Klima Bakımı ve Onarımı",
-    img: "/hastane.jpg",
     component: HastaneHijyenik,
   },
   {
     title: "DX Soğutma Sistemleri Bakım ve Onarım",
-    img: "/dxsogutma.jpg",
     component: Dx,
   },
   {
     title: "Hassas Klima Bakım, Onarım ve Yedek Parça",
-    img: "/hassasklima.jpg",
     component: HassasKlima,
     subCategories: [
       { title: "Veri Merkezi Soğutma", component: VeriMerkezi },
@@ -132,9 +129,12 @@ export const hizmetlerimiz: Service[] = [
   },
   {
     title: "Klima Kiralama",
-    img: "/diger.jpg",
     component: KlimaKiralama,
   },
+  {
+    title:"Arıza Kodları",
+    component: ArızaKodları,
+  }
 ].map((service) => ({
   ...service,
   slug: titleToSlug(service.title),

@@ -19,10 +19,10 @@ const ImageGallery = () => {
                 <Swiper
                     spaceBetween={10}
                     centeredSlides={false}
-                    slidesPerView="auto"
+                    slidesPerView={1}
                     loop={false}
                     modules={[Navigation, Pagination]}
-                    className="w-fit"
+                    className="w-full swiper-custom"
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index} className="!w-[170px] !h-[150px]">
@@ -36,6 +36,7 @@ const ImageGallery = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
             </div>
             <div className="hidden lg:flex justify-center lg:justify-end">
 

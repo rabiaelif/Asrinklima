@@ -15,7 +15,7 @@ export default function HastaneHijyenik() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Hijyenik Klima Sistemlerinin Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Hijyenik Klima Sistemleri Neden Önemlidir?</h2>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export default function HastaneHijyenik() {
 
       <section className="mb-16">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
-          <h2 className="text-2xl font-bold text-blue-800">Yaygın Arızalar ve Çözümleri</h2>
+          <h2 className="text-2xl font-bold text-blue-800">Hijyenik Klima Yaygın Arızalar ve Çözümleri</h2>
         </div>
         <div className="space-y-4">
           <IssueCard

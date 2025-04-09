@@ -61,7 +61,7 @@ const services: Service[] = [
     title: "Veri Merkezi Soğutma",
     img: "/images/veri_merkezi.jpg",
     parentSlug: titleToSlug("Hassas Klima Bakım, Onarım ve Yedek Parça")
-  }, 
+  },
 ].map((service) => ({
   ...service,
   slug: titleToSlug(service.title),
@@ -92,7 +92,7 @@ export default function OurServices() {
     <section id="hizmetlerimiz" className="scroll-mt-[60px]">
       <HeaderOurServices />
       <div className="px-4 max-w-screen overflow-x-hidden">
-        <div className="sm:container mx-auto sm:px-4">
+        <div className="sm:container  mx-auto sm:px-4">
           <div className="relative w-full">
             <Swiper
               modules={[Navigation, Pagination]}
@@ -110,16 +110,18 @@ export default function OurServices() {
               onSlideChange={handleSlideChange}
               onReachBeginning={handleReachBeginning}
               onReachEnd={handleReachEnd}
-
               className="!overflow-visible cursor-grab max-w-full h-auto mx-auto"
+              initialSlide={0}
             >
+
+
               {services.map((service, index) => (
                 <SwiperSlide
                   key={index}
-                  className="flex overflow-hidden justify-start"
-
+                  className="!w-auto"
                 >
-                  <div className="bg-[#F6F6F6] h-[330px] w-[330px] flex flex-col justify-between gap-4 items-start rounded-[30px] px-3.5 pt-3.5 pb-3 text-black relative">
+                  <div className="w-[330px] bg-[#F6F6F6] h-[330px] flex flex-col justify-between gap-4 items-start rounded-[30px] px-3.5 pt-3.5 pb-3 text-black relative">
+
                     <div className="flex pl-2 justify-between items-center w-full">
                       <h3 className="text-lg w-[235px] font-regular leading-tight text-black">
                         {service.title}
@@ -130,7 +132,7 @@ export default function OurServices() {
                           : `/hizmetlerimiz/${service.slug}`
                       }
                         passHref>
-                        <div className="p-3 bg-[#ffffff] rounded-full hover:bg-[#DDDDDD] text-black">
+                        <div className="p-3 active:bg-[#c6c6c6] bg-[#ffffff] rounded-full hover:bg-[#DDDDDD] text-black">
                           <ArrowUpRight className="size-4" />
                         </div>
                       </Link>
@@ -147,7 +149,7 @@ export default function OurServices() {
               ))}
             </Swiper>
 
-            <div className="flex items-center justify-between z-50 -mt-6 sticky">
+            <div className="flex items-start justify-between z-50 -mt-6 sticky">
               <div className="flex-grow relative">
                 <div className="swiper-pagination swiper-pagination-progressbar"></div>
               </div>

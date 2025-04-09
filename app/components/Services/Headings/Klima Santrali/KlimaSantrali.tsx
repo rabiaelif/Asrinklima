@@ -1,6 +1,6 @@
 import React from "react";
 import IssueCard from "../../IssueCard";
-import { FaShieldAlt, FaSnowflake, FaTools } from "react-icons/fa";
+import { FaShieldAlt, FaTools } from "react-icons/fa";
 import Image from "next/image";
 
 const KlimaSantrali = () => {
@@ -93,7 +93,7 @@ const KlimaSantrali = () => {
 
       <section className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
-          <h2 className="text-2xl font-bold text-blue-800 mb-6">Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
+          <h2 className="text-2xl font-bold text-blue-800 mb-6">Klima Santrali Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
         </div>
         <div className="space-y-4">
           <IssueCard

@@ -1,5 +1,5 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
@@ -48,12 +48,12 @@ const Footer = () => {
             </div>
             <div className="flex gap-3">
               <div className="p-2 bg-white rounded-full w-8 h-8 flex items-center justify-center">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
+                <a href="https://www.facebook.com/hakansahin84" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
                   <FaFacebookF size={18} />
                 </a>
               </div>
               <div className="p-2 bg-white rounded-full w-8 h-8 flex items-center justify-center">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
+                <a href="https://www.instagram.com/asrlnklima/" target="_blank" rel="noopener noreferrer" className="text-blue hover:text-yellow">
                   <FaInstagram size={18} />
                 </a>
               </div>

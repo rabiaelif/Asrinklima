@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
-import {
-  FaTools, FaShieldAlt, FaSnowflake, FaFan, FaBolt, FaThermometerHalf,
-  FaExclamationTriangle, FaWrench, FaCog
-} from "react-icons/fa";
+import { FaShieldAlt } from "react-icons/fa";
 import IssueCard from "../../IssueCard";
 
 export default function Rooftop() {
@@ -21,7 +18,7 @@ export default function Rooftop() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaShieldAlt className="text-blue-800 text-2xl" />
-            <h2 className="text-2xl font-bold text-blue-800">Rooftop'da Bakım ve Onarımın Önemi</h2>
+            <h2 className="text-2xl font-bold text-blue-800">Rooftop'da Bakım ve Onarım Neden Önemlidir?</h2>
           </div>
         </div>
 
@@ -47,7 +44,7 @@ export default function Rooftop() {
 
       <section className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
-          <h2 className="text-2xl font-bold text-blue-800">Yaygın Sorunlar ve Çözümleri</h2>
+          <h2 className="text-2xl font-bold text-blue-800">Rooftop Yaygın Sorunlar ve Çözümleri</h2>
         </div>
         <div className="space-y-8">
           {/* 1. Yetersiz Soğutma Kapasitesi */}
@@ -76,30 +73,30 @@ export default function Rooftop() {
               content="Elektriksel iletimde aksamalara neden olabilir."
             />
           </div>
-           {/* 3. Gürültü */}
-        <div>
-          <h3 className="text-xl font-semibold text-black/90 mb-4">3. Kondanser Fan Motoru Problemleri</h3>
-          <div className="space-y-4">
-            <IssueCard
-              title="Kirlenmiş veya Aşınmış Fanlar"
-              solution="Fanların ve motorların dönüş hızı, kanat temizliği ve rulmanların durumu düzenli olarak kontrol edilmeli, gerekirse yağlama veya değişim yapılmalıdır."
-              content="Hava akışını engelleyerek sistem verimliliğini düşürür."
-            />
-            <IssueCard
-              title="Rulman Arızaları"
-              solution="Rulmanların aşınma durumu ve yağ seviyesi kontrol edilmeli, gerekirse rulmanlar yağlanmalı veya değiştirilmelidir."
-              content="Rulmanların aşınması veya sıkışması, fan motorunun düzgün çalışmasını engelleyerek performans kaybına yol açar."
-            />
-            <IssueCard
-              title="Kayış Kopması"
-              solution="Kayışların aşınma durumu düzenli olarak incelenmeli, gevşek veya kopmuş kayışlar tespit edilerek değiştirilmeli ve uygun gerginlikte ayarlanmalıdır."
-              content="Motoru çalışsa bile kayış koptuğunda fan dönmez, bu da soğutma kapasitesinin düşmesine neden olur."
-            />
+          {/* 3. Gürültü */}
+          <div>
+            <h3 className="text-xl font-semibold text-black/90 mb-4">3. Kondanser Fan Motoru Problemleri</h3>
+            <div className="space-y-4">
+              <IssueCard
+                title="Kirlenmiş veya Aşınmış Fanlar"
+                solution="Fanların ve motorların dönüş hızı, kanat temizliği ve rulmanların durumu düzenli olarak kontrol edilmeli, gerekirse yağlama veya değişim yapılmalıdır."
+                content="Hava akışını engelleyerek sistem verimliliğini düşürür."
+              />
+              <IssueCard
+                title="Rulman Arızaları"
+                solution="Rulmanların aşınma durumu ve yağ seviyesi kontrol edilmeli, gerekirse rulmanlar yağlanmalı veya değiştirilmelidir."
+                content="Rulmanların aşınması veya sıkışması, fan motorunun düzgün çalışmasını engelleyerek performans kaybına yol açar."
+              />
+              <IssueCard
+                title="Kayış Kopması"
+                solution="Kayışların aşınma durumu düzenli olarak incelenmeli, gevşek veya kopmuş kayışlar tespit edilerek değiştirilmeli ve uygun gerginlikte ayarlanmalıdır."
+                content="Motoru çalışsa bile kayış koptuğunda fan dönmez, bu da soğutma kapasitesinin düşmesine neden olur."
+              />
+            </div>
           </div>
         </div>
-        </div>
 
-       
+
       </section>
 
       <section className="pb-4 text-black/80 p-5">
