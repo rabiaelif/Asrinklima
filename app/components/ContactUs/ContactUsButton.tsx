@@ -13,10 +13,10 @@ const ContactUsButton = () => {
                         <div className="lg:max-xl:w-[120px] overflow-hidden">
                             <h3 className="font-semibold">E-posta</h3>
                             <a
-                                href="mailto:info.aspar@gmail.com"
+                                href="mailto:info@asrinklima.com"
                                 className="hover:underline text-red truncate block w-full"
                             >
-                                info.aspar@gmail.com
+                                info@asrinklima.com
                             </a>
                         </div>
                     </div>

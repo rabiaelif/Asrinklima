@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-xs sm:text-sm">
                 <EnvelopeIcon className="h-5 w-5 text-whiteB" />
-                <a href="mailto:info.aspar@gmail.com" className="hover:underline hover:text-[#ffffff]">info.aspar@gmail.com</a>
+                <a href="mailto:info@asrinklima.com" className="hover:underline hover:text-[#ffffff]">info@asrinklima.com</a>
               </div>
             </div>
             <div className="flex gap-3">

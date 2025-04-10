@@ -50,7 +50,7 @@ const HomeFooter = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <EnvelopeIcon className="h-5 w-5 text-whiteB" />
-                                <a href="mailto:info.aspar@gmail.com" className="hover:underline hover:text-[#ffffff]">info.aspar@gmail.com</a>
+                                <a href="mailto:info@asrinklima.com" className="hover:underline hover:text-[#ffffff]">info@asrinklima.com</a>
                             </div>
                         </div>
                         <div className="pr-4">
