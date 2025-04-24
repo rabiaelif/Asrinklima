@@ -28,16 +28,16 @@ const HomeFooter = () => {
                     <div className="xl:col-span-2 sm:col-span-4 lg:col-span-3">
                         <h2 className="mb-2 text-yellow">Hizmetler</h2>
                         <ul className="space-y-1">
-                            <li><a href="#" className="hover:text-[#ffffff]">Split Klima Bakım Onarım ve Yedek Parça</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Chiller Revizyon ve Onarım</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Rooftop Klima Arıza, Bakım ve Onarım</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">VRF Klima Sistemleri</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Klima Kiralama</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Klima Santrali Bakım ve Onarım</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
-                            <li><a href="#" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
+                            <li><a href="/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Split Klima Bakım Onarım ve Yedek Parça</a></li>
+                            <li><a href="/hizmetlerimiz/chiller-revizyon-ve-onarim" className="hover:text-[#ffffff]">Chiller Revizyon ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/rooftop-klima-ariza-bakim-ve-onarim" className="hover:text-[#ffffff]">Rooftop Klima Arıza, Bakım ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/vrf-klima-sistemleri" className="hover:text-[#ffffff]">VRF Klima Sistemleri</a></li>
+                            <li><a href="/hizmetlerimiz/klima-kiralama" className="hover:text-[#ffffff]">Klima Kiralama</a></li>
+                            <li><a href="/hizmetlerimiz/klima-santrali-bakim-ve-onarim" className="hover:text-[#ffffff]">Klima Santrali Bakım ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/iklimlendirme-hizmetleri" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
+                            <li><a href="/hizmetlerimiz/hastane-hijyenik-klima-bakimi-ve-onarimi" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
+                            <li><a href="hizmetlerimiz/dx-sogutma-sistemleri-bakim-ve-onarim" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/hassas-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
                         </ul>
                     </div>
 

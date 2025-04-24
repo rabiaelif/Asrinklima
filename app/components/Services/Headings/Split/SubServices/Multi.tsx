@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Multi() {
   return (
-    <div className="max-w-6xl  max-lg:pt-6 px-3">
+    <div className="max-w-6xl max-lg:pt-6 px-3">
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-4xl">
           <p itemProp="description">
@@ -18,7 +18,7 @@ export default function Multi() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Multi Klima Bakımı Neden Önemli?</h2>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function Multi() {
       <section className="mb-16">
         <div className="border-l-4 border-blue-800 pl-4 mb-6">
           <div className="flex items-center gap-3">
-            <FaTools className="text-blue-800 text-2xl" />
+            <FaTools className="text-blue-800 text-4xl lg:text-2xl " />
             <h2 className="text-2xl font-bold text-blue-800">Multi Klima Profesyonel Bakım Hizmetleri</h2>
           </div>
 
@@ -66,7 +66,7 @@ export default function Multi() {
           />
 
           <IssueCard
-            icon={<Image src="/icon/refrigerantgas1.png" alt="Soğutucu gaz ikonu" width={24} height={24} />}
+            icon={<Image unoptimized src="/icon/refrigerantgas1.png" alt="Soğutucu gaz ikonu" width={24} height={24} />}
             title="Soğutucu Gaz Kontrolü"
             content="Soğutucu gazın seviyesi düştüğünde, sistemin soğutma kapasitesi azalır. Profesyonel bakım sırasında gaz seviyesi kontrol edilir ve gerekiyorsa yeniden doldurulur."
             className="hover:shadow-md transition-shadow"

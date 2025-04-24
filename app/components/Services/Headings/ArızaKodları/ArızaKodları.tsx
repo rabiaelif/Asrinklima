@@ -3,7 +3,7 @@ import React from "react";
 export default function ArızaKodları() {
     return (
         <div>
-            <div className="max-w-6xl max-lg:pt-6 px-3 space-y-8 mb-12">
+            <div className="max-w-6xl px-3 space-y-8 mb-12">
                 <h1 className="text-3xl -ml-3 md:text-4xl font-bold no-before text-blue-800 mb-4">
                     Arıza Kodları
                 </h1>

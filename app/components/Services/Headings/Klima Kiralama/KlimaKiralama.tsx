@@ -7,7 +7,7 @@ const KlimaKiralama = () => {
 
   return (
       <div>
-        <div className="max-w-6xl px-3 mb-12 max-lg:pt-6">
+        <div className="max-w-6xl px-3 mb-12 max-lg:pt-2">
           <section className="mb-12">
             <p className="text-black/90 max-w-4xl mb-3">
               İklimlendirme ihtiyaçlarınız için <strong>klima kiralama hizmeti</strong>, hem bireysel hem de ticari müşterilere <strong>esnek ve maliyet avantajı sağlayan</strong> bir çözümdür. Özellikle kısa vadeli projeler, organizasyonlar, sezonluk ihtiyaçlar veya acil durumlar için <strong>klima satın almak yerine kiralamak</strong>, birçok avantaj sunar.
@@ -17,7 +17,7 @@ const KlimaKiralama = () => {
           <section className="mb-16">
             <div className="border-l-4 border-blue-800 pl-4 mb-6">
               <div className="flex items-center gap-3">
-                <FaHandshake className="text-blue-800 text-2xl" />
+                <FaHandshake className="text-blue-800 text-4xl lg:text-2xl" />
                 <h2 className="text-2xl font-bold text-blue-800">Neden Klima Kiralama Tercih Edilmeli?</h2>
               </div>
             </div>

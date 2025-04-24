@@ -18,7 +18,7 @@ export default function Kanallı() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Kanallı Split Klima Bakımı Neden Önemli?</h2>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Kanallı() {
           />
 
           <IssueCard
-            icon={<Image src="/icon/refrigerantgas1.png" alt="Soğutucu gaz ikonu" width={24} height={24} />}
+            icon={<Image unoptimized src="/icon/refrigerantgas1.png" alt="Soğutucu gaz ikonu" width={24} height={24} />}
             title="Soğutucu Gaz Kontrolü"
             content="Gaz seviyesinin düşük olması, soğutma performansını etkileyebilir. Bakım sırasında gaz seviyesi kontrol edilir ve gerekiyorsa yeniden doldurulur."
             className="hover:shadow-md transition-shadow"

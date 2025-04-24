@@ -28,7 +28,7 @@ export default function HassasKlima() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+            <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Hassas Klimaların Bakımı Neden Önemlidir?</h2>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function HassasKlima() {
       <section className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaTools className="text-blue-800 text-2xl" />
+            <FaTools className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Hassas Klimaların Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
           </div>
         </div>
@@ -107,29 +107,38 @@ export default function HassasKlima() {
 
           Hassas klima sistemlerinde <strong>yanlış yedek parça kullanımı</strong>, sistemin dengesini bozabilir ve arızalara yol açabilir. Orijinal olmayan parçalar, uyumsuzluk nedeniyle kısa sürede bozulabilir ve cihazın garanti sürecini de etkileyebilir.
         </p>
-
-        <div className="grid gap-2 mt-4">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-600 w-5 h-5" />
-            <span><strong>Orijinal filtreler</strong> – Hava akışını korur ve sistemin aşırı yüklenmesini engeller.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-600 w-5 h-5" />
-            <span><strong>Fan motorları</strong> – Sessiz ve verimli çalışmasını sağlar.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-600 w-5 h-5" />
-            <span><strong>Nem sensörleri</strong> – Ortamın doğru nem seviyesinde tutulmasına yardımcı olur.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-600 w-5 h-5" />
-            <span><strong>Elektrik bileşenleri</strong> – Voltaj dalgalanmalarına karşı sistemi korur.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-green-600 w-5 h-5" />
-            <span><strong>Soğutucu gazlar</strong> – Doğru basınç değerlerinde soğutma sağlar.</span>
-          </div>
+        <div className="grid gap-3 mt-4">
+          {[
+            {
+              title: "Orijinal filtreler",
+              desc: "Hava akışını korur ve sistemin aşırı yüklenmesini engeller.",
+            },
+            {
+              title: "Fan motorları",
+              desc: "Sessiz ve verimli çalışmasını sağlar.",
+            },
+            {
+              title: "Nem sensörleri",
+              desc: "Ortamın doğru nem seviyesinde tutulmasına yardımcı olur.",
+            },
+            {
+              title: "Elektrik bileşenleri",
+              desc: "Voltaj dalgalanmalarına karşı sistemi korur.",
+            },
+            {
+              title: "Soğutucu gazlar",
+              desc: "Doğru basınç değerlerinde soğutma sağlar.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="flex items-start sm:items-center gap-3">
+              <CheckCircle className="text-green-600 flex-shrink-0 w-5 h-5 mt-1 sm:mt-0" />
+              <span className="">
+                <strong>{item.title}</strong> – {item.desc}
+              </span>
+            </div>
+          ))}
         </div>
+
       </section>
     </div>
   );

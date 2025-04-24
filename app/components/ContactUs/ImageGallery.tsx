@@ -6,36 +6,40 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
 const images = [
-    { src: "/öncesi1.jpg", alt: "öncesi1" },
-    { src: "/sonrası1.jpg", alt: "sonrası1" },
-    { src: "/öncesi2.jpg", alt: "öncesi2" },
-    { src: "/sonrası2.jpg", alt: "sonrası2" },
+    { src: "/oncesi1.jpg", alt: "öncesi1" },
+    { src: "/sonrasi1.jpg", alt: "sonrası1" },
+    { src: "/oncesi2.jpg", alt: "öncesi2" },
+    { src: "/sonrasi2.jpg", alt: "sonrası2" },
 ];
 
 const ImageGallery = () => {
     return (
         <section className="container mx-auto">
             <div className="lg:hidden ">
-                <Swiper
-                    spaceBetween={10}
-                    centeredSlides={false}
-                    slidesPerView={1}
-                    loop={false}
-                    modules={[Navigation, Pagination]}
+                <section className="container mx-auto">
+                    <div className="lg:hidden">
+                        <Swiper
+                            spaceBetween={10}
+                            slidesPerView="auto"
+                            centeredSlides={false}
+                            loop={false}
+                            modules={[Navigation, Pagination]}
                     className="w-full swiper-custom"
-                >
-                    {images.map((image, index) => (
+                        >
+                            {images.map((image, index) => (
                         <SwiperSlide key={index} className="!w-[170px] !h-[150px]">
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                width={170}
-                                height={150}
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        width={170}
+                                        height={150}
                                 className="object-cover w-[170px] h-[150px] rounded-2xl"
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </section>
 
             </div>
             <div className="hidden lg:flex justify-center lg:justify-end">
@@ -51,6 +55,7 @@ const ImageGallery = () => {
                                 alt={image.alt}
                                 width={242}
                                 height={183}
+                                unoptimized
                                 className={`object-cover w-[242px] h-[183px] border-2 border-blue ${index === 0 ? "rounded-tl-3xl" : ""
                                     } ${index === 1 ? "rounded-tr-3xl" : ""} ${index === 2 ? "rounded-bl-3xl" : ""
                                     } ${index === 3 ? "rounded-br-3xl" : ""}`}

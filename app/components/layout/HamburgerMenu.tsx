@@ -76,7 +76,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
           </div>
 
           <div className="flex-1 overflow-y-auto py-4 flex justify-center">
-            <nav className={`space-y-4 w-full text-black flex flex-col items-center ${isServicesPage ? "": "mt-8 pl-6"} `}>
+            <nav className={`space-y-4 w-full text-black flex flex-col items-center ${isServicesPage ? "" : "mt-8 pl-6"} `}>
               <div className={`justify-center px-6 w-full text-black ${isServicesPage ? "md:space-y-4  space-y-3 gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5" : "flex flex-col space-y-4"}`}>
                 {[
                   { href: "#anasayfa", text: "ANASAYFA" },
@@ -91,12 +91,16 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                     text={item.text}
                     setIsMenuOpen={setIsMenuOpen}
                     className={`font-medium transition-all ${isHizmetlerPage ? 'text-center' : ''}`}
-                    />
+                  />
                 ))}
               </div>
 
               {hizmetlerimiz.map((service) => {
-                const isActive = pathname === `/hizmetlerimiz/${service.slug}`;
+                const isSubCategoryActive = service.subCategories?.some(subCategory =>
+                  pathname.startsWith(`/hizmetlerimiz/${service.slug}/${subCategory.slug}`)
+                );
+
+                const isActive = !isSubCategoryActive && pathname.startsWith(`/hizmetlerimiz/${service.slug}`);
 
                 return (
                   <div key={service.slug} className="w-full pr-6">
@@ -110,24 +114,19 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                             document.body.style.top = "";
                             document.body.style.width = "";
                           }}
-
-
                           className={`w-full p-2 py-2 text-black/80 rounded-none hover:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold text-primary dark:text-primary-dark
-                ${isActive ? "bg-red/25 rounded-e-2xl text-red" : "hover:bg-gray-100 hover:text-red"}`}
-
+              ${isActive ? "bg-red/25 rounded-e-2xl text-red" : "hover:bg-gray-100 hover:text-red"}`}
                         >
                           {service.title}
-
                         </Link>
 
                         {service.slug && service.subCategories && (
                           <div className="mt-2 space-y-2">
                             {service.subCategories.map((sub) => {
                               const isSubActive =
-                                pathname === `/hizmetlerimiz/${service.slug}/${sub.slug}`;
-
+                                pathname.startsWith(`/hizmetlerimiz/${service.slug}/${sub.slug}`);
                               return (
-                                <div className="" key={sub.slug}>
+                                <div key={sub.slug}>
                                   <Link
                                     href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
                                     onClick={(e) => {
@@ -137,8 +136,8 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                                       document.body.style.width = "";
                                     }}
                                     className={`block font-medium pl-12 mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
-                                      ? "bg-red/25 rounded-e-xl text-red"
-                                      : "hover:bg-[#F6F6F6] hover:text-red"
+                                        ? "bg-red/25 rounded-e-xl text-red"
+                                        : "hover:bg-[#F6F6F6] hover:text-red"
                                       }`}
                                   >
                                     {sub.title}
@@ -153,6 +152,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                   </div>
                 );
               })}
+
             </nav>
           </div>
 

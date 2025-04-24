@@ -20,7 +20,7 @@ export default function Laboratuvar() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-4">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Laboratuvar Klimalarının Bakımı Neden Önemlidir?</h2>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Laboratuvar() {
       <section className="mb-16">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaTools className="text-blue-800 text-2xl" />
+            <FaTools className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Laboratuvar Klimalarında Sık Karşılaşılan Sorunlar</h2>
           </div>
         </div>

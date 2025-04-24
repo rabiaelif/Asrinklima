@@ -10,6 +10,7 @@ const ImageServices = () => {
                     fill
                     priority={true}
                     className="object-cover"
+                    unoptimized
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 

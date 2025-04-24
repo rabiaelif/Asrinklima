@@ -37,7 +37,6 @@ const Sidebar = React.memo(() => {
     }
   }, []);
 
-
   useEffect(() => {
     scrollToActiveItem();
   }, [openService, scrollToActiveItem]);
@@ -45,34 +44,35 @@ const Sidebar = React.memo(() => {
   const toggleService = useCallback((slug: string) => {
     setOpenService((prev) => (prev !== slug ? slug : prev));
   }, []);
-  
 
   const scrollToTop = () => {
     const topElement = document.getElementById("top");
     if (topElement) {
-      const headerHeight = 100;
+      const headerHeight = 80;
       const elementPosition = topElement.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: elementPosition - headerHeight, behavior: "smooth" });
     }
   };
 
-
   const renderService = useCallback(
     (service: typeof hizmetlerimiz[number]) => {
-      const isActive = pathname === `/hizmetlerimiz/${service.slug}`;
+      const isActive = pathname.startsWith(`/hizmetlerimiz/${service.slug}`);
+      const isSubCategoryActive = service.subCategories?.some(subCategory =>
+        pathname.startsWith(`/hizmetlerimiz/${service.slug}/${subCategory.slug}`)
+      );
 
       return (
         <div
           key={service.slug}
-          ref={isActive ? activeItemRef : null}
+          ref={isActive || isSubCategoryActive ? activeItemRef : null}
           className="flex flex-col flex-grow"
         >
           <Link href={`/hizmetlerimiz/${service.slug}`} passHref>
             <button
               className={`w-full p-2 py-3 text-black/80 rounded-none hover:rounded-e-2xl active:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold
-              ${isActive
-                  ? "bg-red/25 rounded-e-2xl text-red"
-                  : "hover:bg-gray-100 hover:text-red"
+              ${isActive && !isSubCategoryActive
+                ? "bg-red/25 rounded-e-2xl text-red"
+                : "hover:bg-gray-100 hover:text-red"
                 }`}
               onClick={() => {
                 toggleService(service.slug);
@@ -96,15 +96,15 @@ const Sidebar = React.memo(() => {
             <div className="border-l-2 border-red/25 ml-6 flex-grow">
               {service.subCategories.map((subCategory) => {
                 const isSubActive =
-                  pathname === `/hizmetlerimiz/${service.slug}/${subCategory.slug}`;
+                  pathname.startsWith(`/hizmetlerimiz/${service.slug}/${subCategory.slug}`);
 
                 return (
                   <div key={subCategory.slug} className="flex-grow">
                     <Link
                       href={`/hizmetlerimiz/${service.slug}/${subCategory.slug}`}
                       className={`block font-medium mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
-                          ? "bg-red/25 rounded-e-xl text-red"
-                          : "hover:bg-[#F6F6F6] hover:text-red"
+                        ? "bg-red/25 rounded-e-xl text-red"
+                        : "hover:bg-[#F6F6F6] hover:text-red"
                         }`}
                       passHref
                       onClick={scrollToTop}
@@ -125,9 +125,7 @@ const Sidebar = React.memo(() => {
   return (
     <aside
       ref={sidebarRef}
-      className={`pb-20 w-76 h-services pr-2 h-[calc(100vh-5rem)] max-h-screen overflow-y-auto fixed ${isSticky ? " top-24 left-0 bottom-0" : "relative "
-
-        }`}
+      className={`pb-20 w-76 h-services pr-2 h-[calc(100vh-5rem)] max-h-screen overflow-y-auto fixed ${isSticky ? " top-20 left-0 bottom-0" : "relative "}`}
     >
       {hizmetlerimiz.map(renderService)}
     </aside>

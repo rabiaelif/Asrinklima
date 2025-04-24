@@ -4,7 +4,7 @@ import { FaShieldAlt } from "react-icons/fa";
 
 const SoğukOda = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl max-lg:pt-6 mx-auto px-4">
       <section className="text-start mb-10">
         <div className="text-black/90 max-w-5xl">
           <p>
@@ -14,10 +14,10 @@ const SoğukOda = () => {
           </p>
         </div>
       </section>
-      <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
+      <section className="mb-16  lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Soğuk Odalar Neden Önemlidir?</h2>
           </div>
         </div>
@@ -26,7 +26,7 @@ const SoğukOda = () => {
             title=""
             content="Soğuk odalar, gıda, ilaç ve kimyasal sektörlerinde ürünlerin tazeliğini ve kalitesini korumak için hayati öneme sahiptir. Doğru tasarım ve kurulum, soğuk odaların verimli çalışmasını sağlar."
             className="bg-white border border-blue-500 hover:shadow-[0_0_8px_0_rgba(0,0,0,0.1)] transition-shadow shadow-blue-500 shadow-[0_0_4px_0_rgba(0,0,0,0.1)] pb-2" />
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 gap-6">
             <IssueCard
               title="Ürün Güvenliği"
               content="Bakım, ürünlerin tazeliğini ve kalitesini korur."

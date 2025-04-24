@@ -5,7 +5,7 @@ import { FaShieldAlt } from "react-icons/fa";
 
 export default function Dvm() {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl max-lg:pt-6 mx-auto px-4">
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-5xl">
           <p>
@@ -24,7 +24,7 @@ export default function Dvm() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Samsung DVM VRF Bakımı Neden Önemlidir?</h2>
           </div>
         </div>

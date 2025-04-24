@@ -17,7 +17,7 @@ const Split = () => {
 
       <section className="mb-16 bg-blue-50 rounded-xl p-6 shadow-sm">
         <div className="flex items-center mb-4">
-          <FaShieldAlt className="text-blue-600 text-2xl mr-3" />
+          <FaShieldAlt className="text-blue-600 text-4xl lg:text-2xl mr-3" />
           <h2 className="text-2xl font-semibold text-blue-800">Split Klima Bakımı Neden Önemlidir?</h2>
         </div>
         <div className="space-y-4 text-black/80">

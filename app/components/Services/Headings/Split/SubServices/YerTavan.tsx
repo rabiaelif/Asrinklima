@@ -18,7 +18,7 @@ const YerTavan = () => {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Yer Tavan Split Klima Bakımı Neden Önemli?</h2>
           </div>    </div>
 
@@ -80,7 +80,7 @@ const YerTavan = () => {
           />
 
           <IssueCard
-            icon={<Image src="/icon/refrigerantgas1.png"
+            icon={<Image unoptimized src="/icon/refrigerantgas1.png"
               alt="Refrigerant" width={24} height={24} />} title="Soğutucu Gaz Kontrolü ve Dolumu"
             content="Soğutucu gaz seviyesi eksik veya düşükse, performans kaybına yol açar. Gaz dolumu yapılmadan önce, gaz kaçağının tespiti için azot testi uygulanmalı ve kaçağın giderilmesinin ardından gaz seviyesi tamamlanmalıdır."
             className=" hover:shadow-md transition-shadow"

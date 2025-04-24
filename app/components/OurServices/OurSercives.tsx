@@ -41,7 +41,7 @@ const services: Service[] = [
   { title: "Pano Klima Bakım ve Onarım", img: "/images/pano.png" },
   {
     title: "Soğuk Oda İmalat Ve Onarım",
-    img: "/images/soğuk_oda.png",
+    img: "/images/soguk_oda.png",
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
   {
@@ -50,10 +50,10 @@ const services: Service[] = [
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
   { title: "Hastane Hijyenik Klima Bakımı Ve Onarımı", img: "/images/hastane_hijyenik_klima.jpg" },
-  { title: "DX Soğutma Sistemleri Bakım ve Onarım", img: "/images/dx_soğutma_sistemleri.jpeg" },
+  { title: "DX Soğutma Sistemleri Bakım ve Onarım", img: "/images/dx_sogutma_sistemleri.jpeg" },
   {
     title: "Kanal Temizliği",
-    img: "/images/kanal_temizliği2.jpg",
+    img: "/images/kanal_temizligi2.jpg",
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
   { title: "Klima Kiralama", img: "/images/klima_kiralama.jpg" },
@@ -142,6 +142,7 @@ export default function OurServices() {
                       alt={service.title}
                       width={330}
                       height={245}
+                      unoptimized
                       className="rounded-3xl w-full h-full object-cover"
                     />
                   </div>

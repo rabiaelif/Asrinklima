@@ -4,12 +4,12 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="bg-blue text-gray-300 py-6">
-      <div className="h-auto px-4 mx-auto container">
+    <div className="bg-blue text-gray-300 py-10">
+      <div className="h-auto px-6 mx-auto container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           <div className="col-span-1">
-            <h2 className="mb-2 text-yellow text-sm sm:text-base">Hızlı Bağlantılar</h2>
-            <ul className="space-y-1 text-xs sm:text-sm">
+            <h2 className="mb-2 text-yellow">Hızlı Bağlantılar</h2>
+            <ul className="space-y-1">
               <li><a href="/" className="hover:text-[#ffffff]">Anasayfa</a></li>
               <li><a href="/hizmetlerimiz" className="hover:text-[#ffffff]">Hizmetlerimiz</a></li>
               <li><a href="/kiralama" className="hover:text-[#ffffff]">Kiralama</a></li>
@@ -19,18 +19,18 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1">
-            <h2 className="mb-2 text-yellow text-sm sm:text-base">Hizmetler</h2>
-            <ul className="space-y-1 text-xs sm:text-sm">
-              <li><a href="#" className="hover:text-[#ffffff]">Split Klima Bakım Onarım ve Yedek Parça</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Chiller Revizyon ve Onarım</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Rooftop Klima Arıza, Bakım ve Onarım</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">VRF Klima Sistemleri</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Klima Kiralama</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Klima Santrali Bakım ve Onarım</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
-              <li><a href="#" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
+            <h2 className="mb-2 text-yellow">Hizmetler</h2>
+            <ul className="space-y-1 ">
+              <li><a href="/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Split Klima Bakım Onarım ve Yedek Parça</a></li>
+              <li><a href="/hizmetlerimiz/chiller-revizyon-ve-onarim" className="hover:text-[#ffffff]">Chiller Revizyon ve Onarım</a></li>
+              <li><a href="/hizmetlerimiz/rooftop-klima-ariza-bakim-ve-onarim" className="hover:text-[#ffffff]">Rooftop Klima Arıza, Bakım ve Onarım</a></li>
+              <li><a href="/hizmetlerimiz/vrf-klima-sistemleri" className="hover:text-[#ffffff]">VRF Klima Sistemleri</a></li>
+              <li><a href="/hizmetlerimiz/klima-kiralama" className="hover:text-[#ffffff]">Klima Kiralama</a></li>
+              <li><a href="/hizmetlerimiz/klima-santrali-bakim-ve-onarim" className="hover:text-[#ffffff]">Klima Santrali Bakım ve Onarım</a></li>
+              <li><a href="/hizmetlerimiz/iklimlendirme-hizmetleri" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
+              <li><a href="/hizmetlerimiz/hastane-hijyenik-klima-bakimi-ve-onarimi" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
+              <li><a href="/hizmetlerimiz/dx-sogutma-sistemleri-bakim-ve-onarim" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
+              <li><a href="/hizmetlerimiz/hassas-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
             </ul>
           </div>
 

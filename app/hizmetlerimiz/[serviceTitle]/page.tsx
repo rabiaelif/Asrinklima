@@ -1,15 +1,32 @@
 import { notFound } from "next/navigation";
 import { hizmetlerimiz } from "@/data/hizmetlerimiz";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import { ComponentType } from "react";
+
+interface Service {
+  slug: string;
+  title: string;
+  component: ComponentType;
+  subCategories?: { slug: string; title: string }[];
+}
+
+const hizmetlerimizMap: Record<string, Service> = hizmetlerimiz.reduce(
+  (acc, service) => {
+    acc[service.slug] = service;
+    return acc;
+  },
+  {} as Record<string, Service>
+);
 
 export default async function ServiceDetail({
   params,
 }: {
-  params: { serviceTitle: string; subCategoryTitle?: string };
+  params: Promise<{ serviceTitle: string }>;
 }) {
   const { serviceTitle } = await params;
 
-  const service = hizmetlerimiz.find((s) => s.slug === serviceTitle);
+  const service = hizmetlerimizMap[serviceTitle];
 
   if (!service) {
     return notFound();
@@ -21,7 +38,7 @@ export default async function ServiceDetail({
       "chiller-revizyon-ve-onarim": "Chillerlarınız",
       "rooftop-klima-ariza-bakim-ve-onarim": "Rooftoplarınız",
       "vrf-klima-sistemleri": "VRF Sistemleriniz",
-      "klima-santrali-bakim-ve-onarim": "Klima Santrallarınız",
+      "klima-santrali-bakim-ve-onarim": "Klima Santralleriniz",
       "pano-klima-bakim-ve-onarim": "Pano Klimalarınız",
       "iklimlendirme-hizmetleri": "İklimlendirme Hizmetleriniz",
       "hastane-hijyenik-klima-bakimi-ve-onarimi": "Hastane Hijyenik Klimalarınız",
@@ -54,7 +71,7 @@ export default async function ServiceDetail({
 
   const ServiceComponent = service.component;
 
-  const isKlimaKiralama = serviceTitle === "klima-kiralama"|| serviceTitle === "ariza-kodlari";
+  const isKlimaKiralama = serviceTitle === "klima-kiralama" || serviceTitle === "ariza-kodlari";
   const isErrorCodesPage = serviceTitle === "ariza-kodlari";
 
   return (
@@ -72,9 +89,8 @@ export default async function ServiceDetail({
             {service.subCategories.map((sub) => (
               <Link
                 key={sub.title}
-
                 href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
-                className={`cursor-pointer w-40 p-2 rounded-lg hover:bg-gray-200`}
+                className={`cursor-pointer w-64 p-2 rounded-lg hover:bg-gray-200`}
               >
                 {sub.title}
               </Link>
@@ -92,7 +108,7 @@ export default async function ServiceDetail({
               {possessiveTopTitle} Çözümlerinde Uzman Destek
             </h3>
             <p className="text-lg mb-6 !text-whiteB">
-              Eğer {possessiveTitle} için bakım, onarım veya yedek parça
+              {possessiveTitle} için bakım, onarım veya yedek parça
               ihtiyacınız varsa, bizimle iletişime geçebilirsiniz.
               <span className="block mt-2">
                 Size özel çözümlerimizle, sistemlerinizin performansını artırmak
@@ -130,7 +146,22 @@ export default async function ServiceDetail({
 }
 
 export async function generateStaticParams() {
-  return hizmetlerimiz.map((service) => ({
-    serviceTitle: service.slug,
-  }));
+  const params = [];
+
+  for (const service of hizmetlerimiz) {
+    if (service.subCategories && service.subCategories.length > 0) {
+      for (const sub of service.subCategories) {
+        params.push({
+          serviceTitle: service.slug,
+          subCategory: sub.slug,
+        });
+      }
+    } else {
+      params.push({
+        serviceTitle: service.slug,
+      });
+    }
+  }
+
+  return params;
 }

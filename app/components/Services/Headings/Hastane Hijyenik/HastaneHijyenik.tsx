@@ -3,7 +3,7 @@ import IssueCard from "../../IssueCard";
 
 export default function HastaneHijyenik() {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl max-lg:pt-2 mx-auto px-4">
       <section className="text-start mb-10">
         <div className="text-black/90 max-w-5xl">
           <p>
@@ -14,7 +14,7 @@ export default function HastaneHijyenik() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Hijyenik Klima Sistemleri Neden Önemlidir?</h2>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function HastaneHijyenik() {
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <h2 className="text-2xl font-bold text-blue-800">Hastane Klima Bakımının Düzenli Yapılmasının Önemi</h2>
         </div>
-        <div className="grid-cols-2 grid gap-6">
+        <div className="lg:grid-cols-2 grid gap-6">
           <IssueCard
             title="Hasta Güvenliği"
             content="Hijyenik ve verimli klima sistemleri hasta ve personel sağlığını korur."

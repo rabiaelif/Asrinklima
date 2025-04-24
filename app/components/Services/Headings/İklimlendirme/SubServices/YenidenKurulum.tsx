@@ -3,7 +3,7 @@ import { FaExclamationTriangle } from 'react-icons/fa'
 
 const YenidenKurulum = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl max-lg:pt-6 mx-auto px-4">
       <section className="text-start mb-10">
         <div className="space-y-8 text-black/90 max-w-5xl">
           <p>

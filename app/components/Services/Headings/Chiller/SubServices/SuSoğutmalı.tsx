@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function SuSoğutmalı() {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl mx-auto max-lg:pt-6 px-4">
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-4xl">
           <p itemProp="description">
@@ -19,7 +19,7 @@ export default function SuSoğutmalı() {
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-            <FaShieldAlt className="text-blue-800 text-2xl" />
+             <FaShieldAlt className="text-blue-800 hidden lg:flex lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">Su Soğutmalı Chiller'da Bakım ve Onarım Neden Önemlidir?</h2>
           </div>
         </div>
