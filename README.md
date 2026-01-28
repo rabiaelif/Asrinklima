@@ -4,7 +4,6 @@ Asrinklima, bir kurumsal web sitesi olarak React, Next.js ve Tailwind CSS kullan
 
 🔗 https://asrinklima.com/
 
----
 
 ## 🚀 Özellikler
 
@@ -14,7 +13,6 @@ Asrinklima, bir kurumsal web sitesi olarak React, Next.js ve Tailwind CSS kullan
 - 🧩 Modüler ve tekrar kullanılabilir bileşenler  
 - 📦 Git / GitHub ile versiyon kontrolü
 
----
 
 ## 🛠 Teknolojiler
 
