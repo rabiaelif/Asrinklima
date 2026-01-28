@@ -1,4 +1,4 @@
- Asrinklima
+## Asrinklima
 
 Asrinklima, bir kurumsal web sitesi olarak React, Next.js ve Tailwind CSS kullanılarak geliştirilmiş **responsive (mobil uyumlu)** ve modern bir frontend projesidir. Bu proje, kullanıcıya sade, performanslı ve görsel olarak etkileyici bir deneyim sunmayı amaçlar.
 
@@ -6,7 +6,7 @@ Asrinklima, bir kurumsal web sitesi olarak React, Next.js ve Tailwind CSS kullan
 
 ---
 
- 🚀 Özellikler
+## 🚀 Özellikler
 
 - 📱 Tüm cihazlara uyumlu responsive tasarım  
 - 🎨 Figma ile planlanmış UI bileşenleri  
@@ -16,7 +16,7 @@ Asrinklima, bir kurumsal web sitesi olarak React, Next.js ve Tailwind CSS kullan
 
 ---
 
- 🛠 Teknolojiler
+## 🛠 Teknolojiler
 
 Bu proje aşağıdaki teknolojilerle oluşturulmuştur:
 
