@@ -24,6 +24,7 @@ const ImageWithText: React.FC = () => {
                 ref={imgRef}
                 src="/image2.jpg"
                 alt="Background"
+                fetchPriority="high"
                 className="w-full h-full object-cover sm:hidden"
                 style={{ objectPosition: "40% center" }}
             />
@@ -31,6 +32,7 @@ const ImageWithText: React.FC = () => {
             <img
                 src="/image2.jpg"
                 alt="Background"
+                fetchPriority="high"
                 className="w-full h-full object-cover hidden sm:block"
                 style={{ objectPosition: "50% center" }}
             />

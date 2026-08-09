@@ -7,7 +7,7 @@ export default function Vrf() {
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-5xl">
           <p>
-            VRF (Değişken Soğutucu Akışlı) klima sistemleri, soğutucu akışkanın debisini ihtiyaca göre ayarlayabilen bir teknolojiye sahiptir. Bu sayede, sistem tam olarak gereken kapasiteyi sağlayarak enerji tasarrufu ve yüksek verimlilik sunar. VRF sistemleri, çevreye duyarlı R-410A soğutucu akışkan ve akıllı inverter teknolojisini kullanarak hem performans hem de çevre dostu bir çözüm sunar.
+            VRF (Değişken Soğutucu Akışlı) klima sistemleri, soğutucu akışkanın debisini ihtiyaca göre ayarlayabilen bir teknolojiye sahiptir. Bu sayede, sistem tam olarak gereken kapasiteyi sağlayarak enerji tasarrufu ve yüksek verimlilik sunar. VRF bakımı ve düzenli bakım süreçleri, bu verimliliğin korunmasında önemli rol oynar. VRF sistemleri, çevreye duyarlı R-410A soğutucu akışkan ve akıllı inverter teknolojisini kullanarak hem performans hem de çevre dostu bir çözüm sunar.
             <br /><br />
             Tek bir dış üniteye birden fazla iç ünite bağlanabilmesi, bu sistemleri özellikle büyük binalar, ofisler, oteller ve alışveriş merkezleri gibi çoklu zonlu uygulamalar için ideal hale getirir. Ayrıca, VRF sistemleri gelişmiş ısı geri kazanım özelliği sayesinde aynı anda hem ısıtma hem de soğutma yapabilir, bu da enerji verimliliğini artırır ve işletme maliyetlerini düşürür. Bunun yanı sıra, bölgesel iklimlendirme kontrolü ile her bir alanın sıcaklığı bağımsız olarak ayarlanabilir, böylece kullanıcılar kendi konfor seviyelerini kişiselleştirebilir.
           </p>

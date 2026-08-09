@@ -7,7 +7,7 @@ export default function Iklimlendirme() {
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-5xl">
           <p>
-            İklimlendirme hizmetleri, modern yaşamın vazgeçilmez bir parçasıdır. Evlerimizde, ofislerimizde, alışveriş merkezlerinde ve endüstriyel tesislerde iç mekan havasının kontrol edilmesi ve düzenlenmesi amacıyla sunulan hizmetlerdir.
+            İklimlendirme hizmetleri, modern yaşamın vazgeçilmez bir parçasıdır. Evlerimizde, ofislerimizde, alışveriş merkezlerinde ve endüstriyel tesislerde iç mekan havasının kontrol edilmesi ve düzenlenmesi amacıyla sunulan hizmetlerdir. Düzenli bakım ve iklimlendirme bakımı, sistemlerin verimli çalışmasını destekler.
           </p>
           <p>
             Bu hizmetler, sıcaklık, nem, hava akışı, hava kalitesi gibi faktörleri kontrol altında tutarak kullanıcıların konforlu bir ortamda yaşamalarını sağlar. Sadece kurulumla sınırlı kalmaz, aynı zamanda bakım, onarım, yedek parça temini ve sistem iyileştirmeleri gibi hizmetleri de kapsar.

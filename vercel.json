@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "asrinklima.com"
+        }
+      ],
+      "destination": "https://www.asrinklima.com/:path*",
+      "permanent": true
+    }
+  ]
+}

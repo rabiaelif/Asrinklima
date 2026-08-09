@@ -79,11 +79,11 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
             <nav className={`space-y-4 w-full text-black flex flex-col items-center ${isServicesPage ? "" : "mt-8 pl-6"} `}>
               <div className={`justify-center px-6 w-full text-black ${isServicesPage ? "md:space-y-4  space-y-3 gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5" : "flex flex-col space-y-4"}`}>
                 {[
-                  { href: "#anasayfa", text: "ANASAYFA" },
-                  { href: "#hizmetlerimiz", text: "HİZMETLERİMİZ" },
+                  { href: "/", text: "ANASAYFA" },
+                  { href: "/#hizmetlerimiz", text: "HİZMETLERİMİZ" },
                   { href: "/hizmetlerimiz/klima-kiralama", text: "KİRALAMA" },
-                  { href: "#hakkımızda", text: "HAKKIMIZDA" },
-                  { href: "#iletişim", text: "İLETİŞİM" },
+                  { href: "/#hakkımızda", text: "HAKKIMIZDA" },
+                  { href: "/#iletişim", text: "İLETİŞİM" },
                 ].map((item, index) => (
                   <HeaderButton
                     key={index.toString()}
@@ -159,7 +159,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
           <div className="w-full flex flex-col items-center space-y-4 p-6">
             <div className="flex items-center gap-2 text-black">
               <span className="text-xl">📞</span>
-              <a href="tel:+90 5388225559">+90 5388225559</a>
+              <a href="tel:05388225559">0538 822 55 59</a>
             </div>
           </div>
         </div>

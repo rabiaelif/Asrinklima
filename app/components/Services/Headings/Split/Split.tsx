@@ -11,7 +11,7 @@ const Split = () => {
     <div className="max-w-6xl max-lg:pt-8 px-3">
       <section className="text-start mb-10">
         <p className="text-black/90 max-w-4xl">
-          Split klimalar, hem evlerde hem de iş yerlerinde yaygın olarak kullanılan etkili iklimlendirme sistemleridir. Bu cihazların uzun ömürlü ve verimli çalışabilmesi için düzenli bakım ve onarım hizmetleri büyük önem taşır.
+          Split klimalar, hem konutlarda hem de iş yerlerinde yaygın olarak tercih edilen etkili iklimlendirme sistemleridir. Bu cihazların uzun ömürlü, verimli ve sorunsuz şekilde çalışabilmesi için düzenli split klima bakımı ve gerekli onarım işlemlerinin zamanında yapılması büyük önem taşır.
         </p>
       </section>
 

@@ -11,6 +11,7 @@ import HeaderOurServices from "./HeaderOurServices";
 
 interface Service {
   title: string;
+  displayTitle?: string;
   img: string;
   slug: string;
   parentSlug?: string;
@@ -33,33 +34,34 @@ function titleToSlug(title: string): string {
 }
 
 const services: Service[] = [
-  { title: "Split Klima Bakım, Onarım ve Yedek Parça", img: "/images/split_klima.jpg" },
-  { title: "Chiller Revizyon ve Onarım", img: "/images/chiller.jpg" },
-  { title: "Rooftop Klima Arıza, Bakım ve Onarım", img: "/images/rooftop.jpg" },
-  { title: "VRF Klima Sistemleri", img: "/images/vrf.jpg" },
-  { title: "Klima Santrali Bakım ve Onarım", img: "/images/klima_santrali.jpg" },
-  { title: "Pano Klima Bakım ve Onarım", img: "/images/pano.png" },
+  { title: "Split Klima Bakım, Onarım ve Yedek Parça", img: "/images/split_klima.webp" },
+  { title: "Chiller Revizyon ve Onarım", img: "/images/chiller.webp" },
+    { title: "Thermotron Bakım ve Onarım", img: "/images/thermotron.webp" },
+  { title: "Rooftop Klima Arıza, Bakım ve Onarım", img: "/images/rooftop.webp" },
+  { title: "VRF Klima Sistemleri", img: "/images/vrf.webp" },
+  { title: "Klima Santrali Bakım ve Onarım", img: "/images/klima_santrali.webp" },
+  { title: "Pano Klima Bakım ve Onarım", img: "/images/pano.webp" },
   {
     title: "Soğuk Oda İmalat Ve Onarım",
-    img: "/images/soguk_oda.png",
+    img: "/images/soguk_oda.webp",
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
   {
     title: "Havuz Nem Alma Cihazı",
-    img: "/images/havuz_nem_alma_cihazlari.jpg",
+    img: "/images/havuz_nem_alma_cihazlari.webp",
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
-  { title: "Hastane Hijyenik Klima Bakımı Ve Onarımı", img: "/images/hastane_hijyenik_klima.jpg" },
-  { title: "DX Soğutma Sistemleri Bakım ve Onarım", img: "/images/dx_sogutma_sistemleri.jpeg" },
+  { title: "Hastane Hijyenik Klima Bakımı Ve Onarımı", img: "/images/hastane_hijyenik_klima.webp" },
+  { title: "DX Soğutma Sistemleri Bakım ve Onarım", img: "/images/dx_sogutma_sistemleri.webp" },
   {
     title: "Kanal Temizliği",
-    img: "/images/kanal_temizligi2.jpg",
+    img: "/images/kanal_temizligi2.webp",
     parentSlug: titleToSlug("İklimlendirme Hizmetleri")
   },
-  { title: "Klima Kiralama", img: "/images/klima_kiralama.jpg" },
+  { title: "Klima Kiralama", img: "/images/klima_kiralama.webp" },
   {
     title: "Veri Merkezi Soğutma",
-    img: "/images/veri_merkezi.jpg",
+    img: "/images/veri_merkezi.webp",
     parentSlug: titleToSlug("Hassas Klima Bakım, Onarım ve Yedek Parça")
   },
 ].map((service) => ({
@@ -115,7 +117,10 @@ export default function OurServices() {
             >
 
 
-              {services.map((service, index) => (
+              {services.map((service, index) => {
+                const isThermotron = service.img.includes("thermotron");
+
+                return (
                 <SwiperSlide
                   key={index}
                   className="!w-auto"
@@ -124,7 +129,7 @@ export default function OurServices() {
 
                     <div className="flex pl-2 justify-between items-center w-full">
                       <h3 className="text-lg w-[235px] font-regular leading-tight text-black">
-                        {service.title}
+                        {service.displayTitle ?? service.title}
                       </h3>
                       <Link href={
                         service.parentSlug
@@ -137,17 +142,24 @@ export default function OurServices() {
                         </div>
                       </Link>
                     </div>
-                    <Image
-                      src={service.img}
-                      alt={service.title}
-                      width={330}
-                      height={245}
-                      unoptimized
-                      className="rounded-3xl w-full h-full object-cover"
-                    />
+                    <div
+                      className={`relative w-full flex-1 min-h-[200px] overflow-hidden rounded-3xl ${
+                        isThermotron ? "bg-white" : ""
+                      }`}
+                    >
+                      <Image
+                        src={service.img}
+                        alt={service.title}
+                        fill
+                        sizes="330px"
+                        unoptimized
+                        className={isThermotron ? "object-contain" : "object-cover"}
+                      />
+                    </div>
                   </div>
                 </SwiperSlide>
-              ))}
+              );
+              })}
             </Swiper>
 
             <div className="flex items-start justify-between z-50 -mt-6 sticky">

@@ -9,7 +9,7 @@ const KlimaSantrali = () => {
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-5xl">
           <p>
-            Klima santrali, büyük binalarda havalandırma ve iklimlendirme sistemlerinin temel parçalarından biridir. Bu sistemler, iç mekanların hava kalitesini ve sıcaklık seviyelerini kontrol etmek için kritik bir rol oynar. Klima santrallerinin düzgün çalışması, enerji verimliliğini artırmak, kullanıcı konforunu sağlamak ve mekanların hijyenini korumak için son derece önemlidir.
+            Klima santrali, büyük binalarda havalandırma ve iklimlendirme sistemlerinin temel parçalarından biridir. Bu sistemler, iç mekanların hava kalitesini ve sıcaklık seviyelerini kontrol etmek için kritik bir rol oynar. Klima santrali bakımı ve düzenli bakım programları, sistemlerin verimli çalışmasını destekler. Klima santrallerinin düzgün çalışması, enerji verimliliğini artırmak, kullanıcı konforunu sağlamak ve mekanların hijyenini korumak için son derece önemlidir.
           </p>
         </div>
       </section>

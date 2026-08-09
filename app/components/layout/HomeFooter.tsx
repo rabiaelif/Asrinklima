@@ -18,10 +18,10 @@ const HomeFooter = () => {
                         <h2 className="mb-2 text-yellow">Hızlı Bağlantılar</h2>
                         <ul className="space-y-1">
                             <li><a href="/" className="hover:text-[#ffffff]">Anasayfa</a></li>
-                            <li><a href="/hizmetlerimiz" className="hover:text-[#ffffff]">Hizmetlerimiz</a></li>
-                            <li><a href="/kiralama" className="hover:text-[#ffffff]">Kiralama</a></li>
-                            <li><a href="/hakkimizda" className="hover:text-[#ffffff]">Hakkımızda</a></li>
-                            <li><a href="/iletisim" className="hover:text-[#ffffff]">İletişim</a></li>
+                            <li><a href="/#hizmetlerimiz" className="hover:text-[#ffffff]">Hizmetlerimiz</a></li>
+                            <li><a href="/hizmetlerimiz/klima-kiralama" className="hover:text-[#ffffff]">Kiralama</a></li>
+                            <li><a href="/#hakkımızda" className="hover:text-[#ffffff]">Hakkımızda</a></li>
+                            <li><a href="/#iletişim" className="hover:text-[#ffffff]">İletişim</a></li>
                         </ul>
                     </div>
 
@@ -30,14 +30,17 @@ const HomeFooter = () => {
                         <ul className="space-y-1">
                             <li><a href="/hizmetlerimiz/split-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Split Klima Bakım Onarım ve Yedek Parça</a></li>
                             <li><a href="/hizmetlerimiz/chiller-revizyon-ve-onarim" className="hover:text-[#ffffff]">Chiller Revizyon ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/thermotron-bakim-ve-onarim" className="hover:text-[#ffffff]">Thermotron Bakım ve Onarım</a></li>
                             <li><a href="/hizmetlerimiz/rooftop-klima-ariza-bakim-ve-onarim" className="hover:text-[#ffffff]">Rooftop Klima Arıza, Bakım ve Onarım</a></li>
                             <li><a href="/hizmetlerimiz/vrf-klima-sistemleri" className="hover:text-[#ffffff]">VRF Klima Sistemleri</a></li>
                             <li><a href="/hizmetlerimiz/klima-kiralama" className="hover:text-[#ffffff]">Klima Kiralama</a></li>
                             <li><a href="/hizmetlerimiz/klima-santrali-bakim-ve-onarim" className="hover:text-[#ffffff]">Klima Santrali Bakım ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/pano-klima-bakim-ve-onarim" className="hover:text-[#ffffff]">Pano Klima Bakım ve Onarım</a></li>
                             <li><a href="/hizmetlerimiz/iklimlendirme-hizmetleri" className="hover:text-[#ffffff]">İklimlendirme Hizmetleri</a></li>
                             <li><a href="/hizmetlerimiz/hastane-hijyenik-klima-bakimi-ve-onarimi" className="hover:text-[#ffffff]">Hastane Hijyenik Klima Bakımı ve Onarımı</a></li>
-                            <li><a href="hizmetlerimiz/dx-sogutma-sistemleri-bakim-ve-onarim" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
+                            <li><a href="/hizmetlerimiz/dx-sogutma-sistemleri-bakim-ve-onarim" className="hover:text-[#ffffff]">DX Soğutma Sistemleri Bakım ve Onarım</a></li>
                             <li><a href="/hizmetlerimiz/hassas-klima-bakim-onarim-ve-yedek-parca" className="hover:text-[#ffffff]">Hassas Klima Bakım, Onarım ve Yedek Parça</a></li>
+                            <li><a href="/hizmetlerimiz/ariza-kodlari" className="hover:text-[#ffffff]">Arıza Kodları</a></li>
                         </ul>
                     </div>
 
@@ -46,7 +49,7 @@ const HomeFooter = () => {
                             <h2 className="mb-2 text-yellow">İletişim</h2>
                             <div className="flex items-center gap-3 mb-2">
                                 <PhoneIcon className="h-5 w-5 text-whiteB" />
-                                <a href="tel:+5388225559" className="hover:underline hover:text-[#ffffff]">+538 822 5559</a>
+                                <a href="tel:05388225559" className="hover:underline hover:text-[#ffffff]">0538 822 55 59</a>
                             </div>
                             <div className="flex items-center gap-3">
                                 <EnvelopeIcon className="h-5 w-5 text-whiteB" />
@@ -66,7 +69,7 @@ const HomeFooter = () => {
                                     </a>
                                 </div>
                                 <div className="p-2 bg-white rounded-full">
-                                    <a href="https://wa.me/5388225559" target="_blank" rel="noopener noreferrer" className=" text-blue hover:text-yellow">
+                                    <a href="https://wa.me/05388225559" target="_blank" rel="noopener noreferrer" className=" text-blue hover:text-yellow">
                                         <IoLogoWhatsapp
                                             size={20} />
                                     </a>
@@ -76,8 +79,12 @@ const HomeFooter = () => {
                     </div>
 
                 </div>
-                <div className="grid grid-cols-1 mt-12">
-                    <div className="bottom-0 text-sm text-gray-300">© 2025 ASRINKLİMA. Tüm Hakları Saklıdır.</div>
+                <div className="mt-12 flex flex-col gap-2 text-sm text-gray-300 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="bottom-0">© 2026 ASRINKLİMA. Tüm Hakları Saklıdır.</div>
+                    <a href="mailto:rabiaelf@gmail.com" className="hover:underline sm:text-right pr-4">
+                        Tasarım ve Geliştirme:{" "}
+                        <span className="font-semibold text-lg text-red">elf</span>
+                    </a>
                 </div>
             </div>
         </div>

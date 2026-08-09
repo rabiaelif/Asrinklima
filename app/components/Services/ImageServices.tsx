@@ -8,7 +8,9 @@ const ImageServices = () => {
                     src="/images/ImageServices.webp"
                     alt="chiller"
                     fill
+                    sizes="100vw"
                     priority={true}
+                    fetchPriority="high"
                     className="object-cover"
                     unoptimized
                 />

@@ -1,5 +1,5 @@
 {
-  "name": "asparmekanik",
+  "name": "asrinklima",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "sharp": "^0.35.3",
     "typescript": "^5"
   },
   "type": "module"

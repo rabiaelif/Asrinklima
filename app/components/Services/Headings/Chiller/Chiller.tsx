@@ -11,7 +11,7 @@ export default function Chiller() {
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-4xl">
           <p itemProp="description">
-            Chiller sistemleri, endüstriyel ve ticari uygulamalarda kullanılan, su veya hava soğutmalı soğutma üniteleridir. Bu sistemler, özellikle büyük binalarda, fabrikalarda ve alışveriş merkezlerinde iklimlendirme ve proses soğutması için tercih edilir.
+            Chiller sistemleri, endüstriyel ve ticari uygulamalarda kullanılan, su veya hava soğutmalı soğutma üniteleridir. Bu sistemler, özellikle büyük binalarda, fabrikalarda ve alışveriş merkezlerinde iklimlendirme ve proses soğutması için tercih edilir. Chiller bakımı ve düzenli bakım planları, performansın korunması için kritik rol oynar.
           </p>
           <p>Zamanla, kullanım koşullarına bağlı olarak performanslarında düşüşler meydana gelebilir; bu nedenle chiller revizyon ve onarım hizmetleri büyük önem taşır.</p>
         </div>

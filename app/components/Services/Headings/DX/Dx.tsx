@@ -10,7 +10,7 @@ export default function Dx() {
       <section className="text-start mb-10">
         <div className="text-black/90 max-w-4xl">
           <p>
-            DX (Direct Expansion - Doğrudan Genleşmeli) soğutma sistemleri, enerji verimliliği ve hızlı soğutma sağlama özellikleriyle birçok ticari ve endüstriyel alanda yaygın olarak kullanılmaktadır. Ancak, bu sistemlerin uzun ömürlü ve verimli çalışabilmesi için düzenli bakım ve onarım süreçlerinin aksatılmaması gerekir. DX soğutma sistemlerinde meydana gelebilecek arızalar, işletmelerde konfor kaybına, üretim süreçlerinde aksamalara ve enerji maliyetlerinin yükselmesine neden olabilir.
+            DX (Direct Expansion - Doğrudan Genleşmeli) soğutma sistemleri, enerji verimliliği ve hızlı soğutma sağlaması sayesinde birçok ticari ve endüstriyel alanda yaygın olarak kullanılmaktadır. Bu sistemlerin uzun ömürlü ve verimli çalışabilmesi için düzenli bakım ve gerekli onarım işlemlerinin aksatılmaması büyük önem taşır. DX soğutma sistemlerinde meydana gelebilecek arızalar, işletmelerde konfor kaybına, üretim süreçlerinde aksamalara ve enerji maliyetlerinin artmasına neden olabilir.
           </p>
         </div>
       </section>
@@ -18,14 +18,14 @@ export default function Dx() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-blue-800 mb-4">DX Soğutma Sistemleri Nedir?</h2>
         <p className="text-black/90 max-w-5xl">
-          DX Soğutma Sistemleri, soğutucu akışkanın evaporatör ünitesinde direkt genleşme prensibiyle çalışarak yüksek performans sunar. Özellikle büyük ölçekli ticari soğutma sistemlerinde enerji tasarruflu DX klima bakımı büyük önem taşır.
+          DX Soğutma Sistemleri, soğutucu akışkanın evaporatör ünitesinde direkt genleşme prensibiyle çalışarak yüksek performans sunar. Özellikle büyük ölçekli ticari soğutma sistemlerinde enerji tasarruflu DX bakımı büyük önem taşır.
         </p>
       </section>
 
       <section className="mb-16 lg:bg-blue-50 lg:rounded-xl lg:p-6 lg:shadow-sm">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
-             <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
+            <FaShieldAlt className="text-blue-800 text-4xl lg:text-2xl" />
             <h2 className="text-2xl font-bold text-blue-800">DX Soğutma Sistemlerinin Bakımı Neden Önemlidir?</h2>
           </div>
         </div>

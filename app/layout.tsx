@@ -4,11 +4,32 @@ import Header from "@/app/components/layout/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import HomeFooter from "./components/layout/HomeFooter";
 
+const siteUrl = "https://www.asrinklima.com";
+
 export const metadata: Metadata = {
-  title: "Asrın Klima Isıtma, Soğutma ve Havalandırma Sistemleri",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Asrın Klima Isıtma, Soğutma ve Havalandırma Sistemleri",
+    template: "%s",
+  },
   description: "Asrın Klima, klima montajı, bakımı ve tamiri ile birlikte ısıtma-soğutma sistemlerinde profesyonel çözümler sunar. Kaliteli hizmet, uygun fiyat!",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    siteName: "Asrın Klima",
+    locale: "tr_TR",
+    type: "website",
+    url: siteUrl,
+    images: [
+      {
+        url: "/logo.png",
+        alt: "Asrın Klima",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
   },
 };
 
@@ -18,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <link

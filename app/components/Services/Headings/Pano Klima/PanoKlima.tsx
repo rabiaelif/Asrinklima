@@ -9,7 +9,7 @@ export default function PanoKlima() {
             <section className="text-start mb-10">
                 <div className="space-y-4 text-black/90 max-w-4xl">
                     <p>
-                        <strong>Pano klimalar</strong>, elektrik panoları, otomasyon sistemleri ve kontrol kabinleri gibi hassas elektronik ekipmanların aşırı ısınmasını önlemek için kullanılan özel iklimlendirme cihazlarıdır.
+                        <strong>Pano klimalar</strong>, elektrik panoları, otomasyon sistemleri ve kontrol kabinleri gibi hassas elektronik ekipmanların aşırı ısınmasını önlemek için kullanılan özel iklimlendirme cihazlarıdır. Pano klima bakımı ve düzenli bakım, bu hassas ekipmanların güvenliğini ve sürekliliğini korur.
                     </p>
                     <p>
                         Bu sistemler, donanımın güvenli ve verimli çalışmasını sağlamak için <strong>kabin içi sıcaklığı sabit tutar</strong>. Endüstriyel tesislerde, data merkezlerinde ve üretim hatlarında kritik öneme sahiptir.

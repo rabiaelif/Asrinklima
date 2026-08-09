@@ -9,7 +9,8 @@ export default function Rooftop() {
       <section className="text-start mb-10">
         <div className="space-y-1 text-black/90 max-w-4xl">
           <p itemProp="description">
-            Rooftop klima sistemleri, özellikle ticari binalar, alışveriş merkezleri, oteller ve endüstriyel tesislerde yaygın olarak kullanılan, çatı üstüne monte edilen paket tipi klima sistemleridir. </p>
+            Rooftop klima sistemleri, özellikle ticari binalar, alışveriş merkezleri, oteller ve endüstriyel tesislerde yaygın olarak kullanılan, çatı üstüne monte edilen paket tipi klima sistemleridir. Rooftop bakımı ve düzenli bakım programları, bu sistemlerin güvenli ve verimli çalışmasını sağlar.
+          </p>
           <p>Bu sistemler, hem ısıtma hem de soğutma ihtiyaçlarını karşılar. Bu sistemlerin verimli ve uzun ömürlü olabilmesi için düzenli bakım ve onarımları büyük önem taşır.</p>
         </div>
       </section>

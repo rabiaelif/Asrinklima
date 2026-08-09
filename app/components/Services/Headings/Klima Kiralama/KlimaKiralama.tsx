@@ -10,7 +10,7 @@ const KlimaKiralama = () => {
         <div className="max-w-6xl px-3 mb-12 max-lg:pt-2">
           <section className="mb-12">
             <p className="text-black/90 max-w-4xl mb-3">
-              İklimlendirme ihtiyaçlarınız için <strong>klima kiralama hizmeti</strong>, hem bireysel hem de ticari müşterilere <strong>esnek ve maliyet avantajı sağlayan</strong> bir çözümdür. Özellikle kısa vadeli projeler, organizasyonlar, sezonluk ihtiyaçlar veya acil durumlar için <strong>klima satın almak yerine kiralamak</strong>, birçok avantaj sunar.
+              İklimlendirme ihtiyaçlarınız için <strong>klima kiralama hizmeti</strong>, hem bireysel hem de ticari müşterilere <strong>esnek ve maliyet avantajı sağlayan</strong> bir çözümdür. Özellikle kısa vadeli projeler, organizasyonlar, sezonluk ihtiyaçlar veya acil durumlar için <strong>klima satın almak yerine kiralamak</strong>, birçok avantaj sunar. Kiralama süresince bakım ve cihazların bakımı tarafımızdan takip edilir.
             </p>
           </section>
 
@@ -116,7 +116,7 @@ const KlimaKiralama = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="tel:+905388225549"
+                href="tel:05388225559"
                 className="border-2 border-white hover:bg-white hover:text-red font-semibold py-3 px-6 rounded-lg transition duration-300"
               >
                 <span className="flex items-center justify-center">
@@ -133,7 +133,7 @@ const KlimaKiralama = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  0538 822 55 49
+                  0538 822 55 59
                 </span>
               </a>
             </div>

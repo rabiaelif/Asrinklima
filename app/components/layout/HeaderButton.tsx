@@ -17,14 +17,15 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
   const [targetId, setTargetId] = useState<string | null>(null);
 
   const handleClick = (e: React.MouseEvent) => {
-    if (href.startsWith("#")) {
+    if (href.includes("#")) {
       e.preventDefault();
-      const id = href.slice(1);
+      const [path, id] = href.split("#");
+      const targetPath = path || "/";
 
-      if (pathname !== "/") {
+      if (pathname !== targetPath) {
         setIsNavigating(true);
         setTargetId(id);
-        router.push(`/#${id}`);
+        router.push(`${targetPath}#${id}`);
       } else {
         scrollToElement(id);
       }

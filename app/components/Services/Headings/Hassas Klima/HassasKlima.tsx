@@ -10,7 +10,7 @@ export default function HassasKlima() {
       <section className="text-start mb-10">
         <div className="space-y-4 text-black/90 max-w-4xl">
           <p>
-            Hassas klimalar, özellikle <strong>veri merkezleri, laboratuvarlar, hastaneler ve telekomünikasyon odaları</strong> gibi ortamlarda sıcaklık ve nem dengesinin korunmasını sağlayan özel sistemlerdir. Bu sistemler, standart klimalara kıyasla çok daha hassas çalıştığı için <strong>düzenli bakım ve doğru yedek parça kullanımı</strong> büyük önem taşır.
+            Hassas klimalar; özellikle <strong>veri merkezleri, laboratuvarlar, hastaneler ve telekomünikasyon odaları</strong> gibi sıcaklık ve nem kontrolünün kritik olduğu alanlarda kullanılan özel iklimlendirme sistemleridir. Standart klimalara göre çok daha hassas toleranslarla çalıştıkları için, bu sistemlerde <strong>hassas klima bakımı</strong>, periyodik kontroller ve <strong>doğru yedek parça kullanımı</strong> büyük önem taşır.
           </p>
           <p>
             Eğer bakım ve onarım süreçleri aksatılırsa, hassas klima sistemlerinde verim düşüşü yaşanabilir ve bu durum cihazlara zarar verebilir. Örneğin, bir veri merkezinde <strong>klima arızası</strong> yaşanırsa, sunucular aşırı ısınarak sistem çökmesine neden olabilir.
