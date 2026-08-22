@@ -117,6 +117,7 @@ const KlimaKiralama = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="tel:05388225559"
+                title="Bizi Arayın: 0538 822 55 59"
                 className="border-2 border-white hover:bg-white hover:text-red font-semibold py-3 px-6 rounded-lg transition duration-300"
               >
                 <span className="flex items-center justify-center">

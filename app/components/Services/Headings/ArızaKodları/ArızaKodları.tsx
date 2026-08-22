@@ -4,7 +4,7 @@ export default function ArızaKodları() {
     return (
         <div>
             <div className="max-w-6xl px-3 space-y-8 mb-12">
-                <h1 className="text-3xl -ml-3 md:text-4xl font-bold no-before text-blue-800 mb-4">
+                <h1 className="service-page-title -ml-3 mb-4">
                     Arıza Kodları
                 </h1>
                 <div>
@@ -175,6 +175,7 @@ export default function ArızaKodları() {
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a
                             href="tel:05388225559"
+                            title="Bizi Arayın: 0538 822 55 59"
                             className="border-2 border-white hover:bg-white hover:text-red font-semibold py-3 px-6 rounded-lg transition duration-300"
                         >
                             <span className="flex items-center justify-center">

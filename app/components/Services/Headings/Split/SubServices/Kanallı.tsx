@@ -108,7 +108,7 @@ export default function Kanallı() {
         </ul>
       </section>
 
-      <section className="mb-16">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-16">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <h2 className="text-2xl font-bold text-blue-800">Kanallı Klima Sık Arızalar ve Çözümleri</h2>
         </div>

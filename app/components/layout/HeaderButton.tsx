@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 interface HeaderButtonProps {
   text: string;
   href: string;
+  title?: string;
   setIsMenuOpen?: (isOpen: boolean) => void;
   className?: string;
 }
 
-const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, className }) => {
+const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, title, setIsMenuOpen, className }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [isNavigating, setIsNavigating] = useState(false);
@@ -59,7 +60,7 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
     const element = document.getElementById(id);
     if (element) {
       let offset = 80;
-      if (id === "hakkımızda") {
+      if (id === "hakkimizda") {
         offset = 40;
       } const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
@@ -67,10 +68,10 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({ text, href, setIsMenuOpen, 
   };
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} title={title ?? text} className={`min-w-0 break-words ${className}`}>
       <span
         onClick={handleClick}
-        className={`font-medium transition-colors bg-transparent pb-1 cursor-pointer ${setIsMenuOpen ? "text-black text-xl font-medium transition-all" : "text-whiteB hover:border-b border-yellow text-base hover:text-yellow "
+        className={`font-medium transition-colors bg-transparent pb-1 cursor-pointer ${setIsMenuOpen ? "text-black text-sm sm:text-base font-medium transition-all" : "text-whiteB hover:border-b border-yellow text-base hover:text-yellow "
           } `}
       >
         {text}

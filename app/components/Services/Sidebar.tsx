@@ -42,7 +42,7 @@ const Sidebar = React.memo(() => {
   }, [openService, scrollToActiveItem]);
 
   const toggleService = useCallback((slug: string) => {
-    setOpenService((prev) => (prev !== slug ? slug : prev));
+    setOpenService((prev) => (prev === slug ? null : slug));
   }, []);
 
   const scrollToTop = () => {
@@ -67,29 +67,28 @@ const Sidebar = React.memo(() => {
           ref={isActive || isSubCategoryActive ? activeItemRef : null}
           className="flex flex-col flex-grow"
         >
-          <Link href={`/hizmetlerimiz/${service.slug}`} passHref>
-            <button
-              className={`w-full p-2 py-3 text-black/80 rounded-none hover:rounded-e-2xl active:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold
-              ${isActive && !isSubCategoryActive
+          <Link
+            href={`/hizmetlerimiz/${service.slug}`}
+            title={service.title}
+            className={`w-full p-2 py-3 text-black/80 rounded-none hover:rounded-e-2xl active:rounded-e-2xl text-start cursor-pointer flex items-center justify-between pl-5 text-base font-semibold
+            ${isActive && !isSubCategoryActive
                 ? "bg-red/25 rounded-e-2xl text-red"
                 : "hover:bg-gray-100 hover:text-red"
-                }`}
-              onClick={() => {
-                toggleService(service.slug);
-                scrollToTop();
-                scrollToActiveItem();
-              }}
-            >
-              {service.title}
-              {service.subCategories && (
-                <span
-                  className={`transition-transform p-2 text-black/60 duration-300 ease-in-out ${openService === service.slug ? "rotate-90 text-red" : "rotate-0"
-                    }`}
-                >
-                  <IoIosArrowForward />
-                </span>
-              )}
-            </button>
+              }`}
+            onClick={() => {
+              toggleService(service.slug);
+              scrollToTop();
+            }}
+          >
+            {service.title}
+            {service.subCategories && (
+              <span
+                className={`transition-transform p-2 text-black/60 duration-300 ease-in-out ${openService === service.slug ? "rotate-90 text-red" : "rotate-0"
+                  }`}
+              >
+                <IoIosArrowForward />
+              </span>
+            )}
           </Link>
 
           {openService === service.slug && service.subCategories && (
@@ -102,6 +101,7 @@ const Sidebar = React.memo(() => {
                   <div key={subCategory.slug} className="flex-grow">
                     <Link
                       href={`/hizmetlerimiz/${service.slug}/${subCategory.slug}`}
+                      title={subCategory.title}
                       className={`block font-medium mr-8 p-2 py-2 text-sm rounded-none hover:rounded-e-xl ${isSubActive
                         ? "bg-red/25 rounded-e-xl text-red"
                         : "hover:bg-[#F6F6F6] hover:text-red"
@@ -125,7 +125,7 @@ const Sidebar = React.memo(() => {
   return (
     <aside
       ref={sidebarRef}
-      className={`pb-20 w-76 h-services pr-2 h-[calc(100vh-5rem)] max-h-screen overflow-y-auto fixed ${isSticky ? " top-20 left-0 bottom-0" : "relative "}`}
+      className={`pb-20 w-76 h-services pr-2 h-[calc(100vh-5rem)] max-h-screen overflow-y-auto ${isSticky ? "fixed top-20 left-0 bottom-0" : "relative"}`}
     >
       {hizmetlerimiz.map(renderService)}
     </aside>

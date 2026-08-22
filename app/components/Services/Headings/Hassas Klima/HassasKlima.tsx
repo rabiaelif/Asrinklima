@@ -63,7 +63,7 @@ export default function HassasKlima() {
         </div>
       </section>
 
-      <section className="mb-8">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <div className="flex items-center gap-3">
             <FaTools className="text-blue-800 text-4xl lg:text-2xl" />

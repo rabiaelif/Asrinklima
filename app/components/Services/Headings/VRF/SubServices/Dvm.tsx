@@ -49,7 +49,7 @@ export default function Dvm() {
         </div>
       </section>
 
-      <section className="mb-8">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-8">
         <h2 className="text-2xl font-bold text-blue-800 mb-6">Samsung DVM VRF Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
         <div className="space-y-4">
           <IssueCard

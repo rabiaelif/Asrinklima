@@ -63,13 +63,13 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
           className={`fixed bg-[#f6f6f6] inset-y-4 right-4 left-4 z-[9999] flex flex-col rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-[100vw]"} menu-content`}
           onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
-          <div className="w-full flex border-b-2 border-gray-200 justify-between items-center pb-4 p-6">
-            <div className="px-3 py-1 font-bold">
+          <div className="w-full flex border-b-2 border-gray-200 justify-between items-center gap-3 pb-4 p-6">
+            <div className="px-3 py-1 font-bold min-w-0">
               <Logo isMenuOpen={isMenuOpen} />
             </div>
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="text-black bg-yellow hover:bg-[#CFD787] transition-all rounded-md p-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-black"
+              className="flex-shrink-0 text-black bg-yellow hover:bg-[#CFD787] transition-all rounded-md p-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-black"
             >
               <XMarkIcon className="size-6" />
             </button>
@@ -79,20 +79,24 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
             <nav className={`space-y-4 w-full text-black flex flex-col items-center ${isServicesPage ? "" : "mt-8 pl-6"} `}>
               <div className={`justify-center px-6 w-full text-black ${isServicesPage ? "md:space-y-4  space-y-3 gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5" : "flex flex-col space-y-4"}`}>
                 {[
-                  { href: "/", text: "ANASAYFA" },
-                  { href: "/#hizmetlerimiz", text: "HİZMETLERİMİZ" },
-                  { href: "/hizmetlerimiz/klima-kiralama", text: "KİRALAMA" },
-                  { href: "/#hakkımızda", text: "HAKKIMIZDA" },
-                  { href: "/#iletişim", text: "İLETİŞİM" },
-                ].map((item, index) => (
-                  <HeaderButton
-                    key={index.toString()}
-                    href={item.href}
-                    text={item.text}
-                    setIsMenuOpen={setIsMenuOpen}
-                    className={`font-medium transition-all ${isHizmetlerPage ? 'text-center' : ''}`}
-                  />
-                ))}
+                  { href: "/", text: "ANASAYFA", title: "Asrın Klima Anasayfa" },
+                  { href: "/#hizmetlerimiz", text: "HİZMETLERİMİZ", title: "Sunduğumuz Isıtma, Soğutma ve Havalandırma Hizmetleri" },
+                  { href: "/hizmetlerimiz/klima-kiralama", text: "KİRALAMA", title: "Klima Kiralama Hizmetleri" },
+                  { href: "/#hakkimizda", text: "HAKKIMIZDA", title: "Asrın Klima Hakkımızda" },
+                  { href: "/#iletisim", text: "İLETİŞİM", title: "Bize Ulaşın - İletişim Bilgileri" },
+                ].map((item, index, items) => {
+                  const isLastOdd = isHizmetlerPage && items.length % 2 === 1 && index === items.length - 1;
+                  return (
+                    <HeaderButton
+                      key={index.toString()}
+                      href={item.href}
+                      text={item.text}
+                      title={item.title}
+                      setIsMenuOpen={setIsMenuOpen}
+                      className={`font-medium transition-all ${isHizmetlerPage ? 'text-center' : ''} ${isLastOdd ? 'col-span-2' : ''}`}
+                    />
+                  );
+                })}
               </div>
 
               {hizmetlerimiz.map((service) => {
@@ -108,6 +112,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                       <>
                         <Link
                           href={`/hizmetlerimiz/${service.slug}`}
+                          title={service.title}
                           onClick={(e) => {
                             setIsMenuOpen(false);
                             document.body.style.position = "";
@@ -129,6 +134,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
                                 <div key={sub.slug}>
                                   <Link
                                     href={`/hizmetlerimiz/${service.slug}/${sub.slug}`}
+                                    title={sub.title}
                                     onClick={(e) => {
                                       setIsMenuOpen(false);
                                       document.body.style.position = "";
@@ -159,7 +165,7 @@ export default function HamburgerMenu({ isMenuOpen, setIsMenuOpen }: HamburgerMe
           <div className="w-full flex flex-col items-center space-y-4 p-6">
             <div className="flex items-center gap-2 text-black">
               <span className="text-xl">📞</span>
-              <a href="tel:05388225559">0538 822 55 59</a>
+              <a href="tel:05388225559" title="Bizi Arayın: 0538 822 55 59">0538 822 55 59</a>
             </div>
           </div>
         </div>

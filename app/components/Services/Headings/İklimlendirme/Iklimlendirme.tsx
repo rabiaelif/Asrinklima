@@ -124,7 +124,7 @@ export default function Iklimlendirme() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-12">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <h2 className="text-2xl font-bold text-blue-800 mb-6">Sık Karşılaşılan Sorunlar ve Çözümleri</h2>
         </div>

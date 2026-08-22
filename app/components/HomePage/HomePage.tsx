@@ -19,10 +19,10 @@ const HomePage = () => {
                             <ClockIcon className="size-5 text-yellow" />
                             <span>24/7 Ulaşılabilir</span></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold">
+                    <h1 className="no-before !text-whiteB !px-0 text-3xl md:text-4xl font-bold">
                         ISITMA, SOĞUTMA VE HAVALANDIRMA HİZMETLERİ
-                    </h2>
-                    <p className="text-lg max-w-xl lg:text-lg text-whiteB font-medium my-4 lg:pb-4 font-regular">
+                    </h1>
+                    <p className="text-lg max-w-xl lg:text-lg text-whiteB my-4 lg:pb-4 font-regular">
 
                         Ev, ofis ve fabrika klimalarının tamir, bakım, onarım ve kiralama hizmetlerini sunmaktayız.</p>
 
@@ -48,7 +48,7 @@ const HomePage = () => {
                                 <PhoneIcon className="h-6 w-6 text-yellow " />
                                 <div className="flex flex-col gap-2.5">
                                     <h3 className=" font-semibold text-center">Hakan Şahin</h3>
-                                    <a href="tel:05388225559" className="hover:underline font-regular text-center">0538 822 55 59</a>
+                                    <a href="tel:05388225559" title="Bizi Arayın: 0538 822 55 59" className="hover:underline font-regular text-center">0538 822 55 59</a>
                                 </div>
                             </div>
                         </button>

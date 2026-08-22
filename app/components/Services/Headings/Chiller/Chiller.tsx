@@ -48,7 +48,7 @@ export default function Chiller() {
                     Soğutma sistemi tamamen çalışmaz hale geldi ve acil müdahale gerektirdi.
                   </p>
                   <div className="mt-3">
-                    <Link href="https://www.facebook.com/share/v/1FZiWTTuKb/" target="_blank">İlgili Videoyu İzlemek için Tıklayın</Link>
+                    <Link href="https://www.facebook.com/share/v/1FZiWTTuKb/" target="_blank" rel="nofollow noopener noreferrer" title="Chiller Arızası Örnek Videosu (Facebook)">İlgili Videoyu İzlemek için Tıklayın</Link>
                   </div>
                 </div>
               </>
@@ -170,7 +170,7 @@ export default function Chiller() {
         </p>
       </section>
 
-      <section className="mb-8">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-8">
         <div className="border-l-4 border-blue-800 pl-4 mb-8">
           <h2 className="text-2xl font-bold text-blue-800">Sık Karşılaşılan Chiller Arızaları ve Çözümleri</h2>
         </div>

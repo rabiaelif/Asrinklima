@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/layout/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import HomeFooter from "./components/layout/HomeFooter";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 const siteUrl = "https://www.asrinklima.com";
 
@@ -10,12 +17,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Asrın Klima Isıtma, Soğutma ve Havalandırma Sistemleri",
-    template: "%s",
+    template: "%s | Asrın Klima",
   },
   description: "Asrın Klima, klima montajı, bakımı ve tamiri ile birlikte ısıtma-soğutma sistemlerinde profesyonel çözümler sunar. Kaliteli hizmet, uygun fiyat!",
+  authors: [{ name: "Asrın Klima" }],
+  creator: "Asrın Klima",
+  publisher: "Asrın Klima",
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     siteName: "Asrın Klima",
     locale: "tr_TR",
@@ -42,16 +54,8 @@ export default function RootLayout({
     <html lang="tr">
       <head>
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
       </head>
-      <body>
+      <body className={outfit.className}>
       <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <header className="">

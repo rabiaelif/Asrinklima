@@ -53,7 +53,7 @@ export default function PanoKlima() {
                 </div>
             </section>
 
-            <section className="mb-16">
+            <section itemScope itemType="https://schema.org/FAQPage" className="mb-16">
                 <div className="border-l-4 border-blue-800 pl-4 mb-8">
                     <div className="flex items-center gap-3">
                         <FaTools className="text-blue-800 lg:flex hidden text-2xl" />

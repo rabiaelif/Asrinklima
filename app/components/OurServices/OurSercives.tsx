@@ -136,6 +136,7 @@ export default function OurServices() {
                           ? `/hizmetlerimiz/${service.parentSlug}/${service.slug}`
                           : `/hizmetlerimiz/${service.slug}`
                       }
+                        title={service.title}
                         passHref>
                         <div className="p-3 active:bg-[#c6c6c6] bg-[#ffffff] rounded-full hover:bg-[#DDDDDD] text-black">
                           <ArrowUpRight className="size-4" />

@@ -37,11 +37,11 @@ const Header = () => {
         </div>
 
         <div className="space-x-4 xl:mr-40 lg:space-x-8 hidden text-whiteB lg:flex justify-center w-full items-center h-full">
-          <HeaderButton href="/" text="ANASAYFA" />
-          <HeaderButton href="/#hizmetlerimiz" text="HİZMETLERİMİZ" />
-          <HeaderButton href="/hizmetlerimiz/klima-kiralama" text="KİRALAMA" />
-          <HeaderButton href="/#hakkımızda" text="HAKKIMIZDA" />
-          <HeaderButton href="/#iletişim" text="İLETİŞİM" />
+          <HeaderButton href="/" text="ANASAYFA" title="Asrın Klima Anasayfa" />
+          <HeaderButton href="/#hizmetlerimiz" text="HİZMETLERİMİZ" title="Sunduğumuz Isıtma, Soğutma ve Havalandırma Hizmetleri" />
+          <HeaderButton href="/hizmetlerimiz/klima-kiralama" text="KİRALAMA" title="Klima Kiralama Hizmetleri" />
+          <HeaderButton href="/#hakkimizda" text="HAKKIMIZDA" title="Asrın Klima Hakkımızda" />
+          <HeaderButton href="/#iletisim" text="İLETİŞİM" title="Bize Ulaşın - İletişim Bilgileri" />
         </div>
 
         <div className="lg:hidden">

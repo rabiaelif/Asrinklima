@@ -14,6 +14,7 @@ const ContactUsButton = () => {
                             <h3 className="font-semibold">E-posta</h3>
                             <a
                                 href="mailto:info@asrinklima.com"
+                                title="Bize E-posta Gönderin"
                                 className="hover:underline text-red truncate block w-full"
                             >
                                 info@asrinklima.com
@@ -22,7 +23,7 @@ const ContactUsButton = () => {
                     </div>
                 </div>
                 <div>
-                    <a href="tel:05388225559" className="border-2 border-[#D9D9D9] active:border-red hover:border-red rounded-xl xl:p-6 lg:p-4 p-6 flex items-center">
+                    <a href="tel:05388225559" title="Bizi Arayın: 0538 822 55 59" className="border-2 border-[#D9D9D9] active:border-red hover:border-red rounded-xl xl:p-6 lg:p-4 p-6 flex items-center">
                         <div className="flex items-center xl:gap-4 lg:gap-2 gap-4">
                             <div className="bg-red p-3 rounded-xl">
                                 <PhoneIcon className="h-6 w-6 text-white flex items-center justify-center" />

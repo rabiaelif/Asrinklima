@@ -30,7 +30,7 @@ const Split = () => {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section itemScope itemType="https://schema.org/FAQPage" className="mb-16">
         <div className="flex items-center mb-6 max-lg:ml-2">
           <FaExclamationTriangle className="text-red text-4xl lg:text-2xl mr-3" />
           <h2 className="text-2xl font-semibold text-blue-800">Sık Karşılaşılan Split Klima Sorunları ve Çözümleri</h2>

@@ -6,10 +6,10 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
 const images = [
-    { src: "/oncesi1.jpg", alt: "öncesi1" },
-    { src: "/sonrasi1.jpg", alt: "sonrası1" },
-    { src: "/oncesi2.jpg", alt: "öncesi2" },
-    { src: "/sonrasi2.jpg", alt: "sonrası2" },
+    { src: "/oncesi1.webp", alt: "Bakım öncesi is ve tozla kararmış klima santrali filtreleri" },
+    { src: "/sonrasi1.webp", alt: "Bakım sonrası temizlenmiş, bembeyaz klima santrali filtreleri" },
+    { src: "/oncesi2.webp", alt: "Bakım öncesi kirli ve karanlık klima santrali iç bölmesi" },
+    { src: "/sonrasi2.webp", alt: "Bakım sonrası temizlenmiş klima santrali damper ve filtre bölmesi" },
 ];
 
 const ImageGallery = () => {
